@@ -1,0 +1,533 @@
+@charset "utf-8";
+/* CSS Document */
+#personal_main{
+	background: url('images/house.png');
+	width: 640px;
+	height: 640px;
+/* 	margin-bottom: -70px; */
+}
+
+#personal_main .cloud{
+	width: 640px;
+	height: 289px;
+}
+
+#personal_main .cloud .personal_data{
+	width: 258px;
+	height: 169px;
+	margin-top: 51px;
+	margin-left: 52px;
+	display: inline-block;
+	float: left;
+	font-size: 14px;
+}
+
+#personal_main .cloud .introduction{
+	width: 238px;
+	height: 95px;
+	margin-top: 51px;
+	margin-right: 92px;
+	margin-bottom: 24px;
+	word-wrap: break-word;
+	display: inline-block;
+	float: left;
+}
+
+#personal_main .cloud #edit_persoanl_data{
+	width: 94px;
+	height: 22px;
+	display: inline-block;
+	float: left;
+}
+
+#personal_main .cloud .personal_video{
+	background: black;
+	width: 138px;
+	height: 86px;
+	margin-top: 9px;
+	margin-left: 145px;
+	margin-right: 47px;
+	display: inline-block;
+	float: left;
+}
+
+
+#personal_main .house{
+	
+	width: 640px;
+	height: 351px;
+	display: inline-block;
+}
+
+
+#personal_main .house .personal_guestbooks{
+	margin-top: 95px;
+	width: 305px;
+	height: 202px;
+	margin-left: 21px;
+	float: left;
+}
+
+#personal_main .house .personal_guestbooks .slides{
+	width: 305px;
+	height: 202px;
+	display: inline-block;
+	float: left;
+}
+
+#personal_main .house .personal_guestbooks .slides .slide{
+	width: 305px;
+	height: 202px;
+	display: inline-block;
+	float: left;
+}
+
+#personal_main .house .personal_guestbooks .slides .slide .message{
+	background: #d78c5d;
+	width: 305px;
+	height: 46px;
+	margin-top: 4px;
+	display: inline-block;
+	float: left;
+}
+
+#personal_main .house .personal_guestbooks .slides .slide .message .photo{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-bottom: 3px;
+	float: left;
+}
+
+#personal_main .house .personal_guestbooks .slides .slide .message .content{
+	width: 259px;
+	height: 40px;
+	display: inline-block;
+	margin-left: 2px;
+	margin-top: 2px;
+	margin-right: 2px;
+	margin-bottom: 3px;
+	word-break: break-all;
+	float: left;
+}
+
+#personal_main .house .personal_guestbooks .slides .slide .message .content a{
+	text-decoration: none;
+	color: black;
+}
+
+#personal_main .house .private{
+	text-align: center;
+	margin-top: 94px;
+}
+
+
+
+#personal_main .house .personal_guestbooks #new_guestbook{
+	width: 305px;
+	height: 22px;
+	margin-top: 4px;
+	float: left;
+}
+
+#personal_main .house .personal_guestbooks #new_guestbook .new_gbook{
+	border: none;
+	background: white;
+	width: 305px;
+	height: 22px;
+	float: left;
+}
+
+#personal_main .house .personal_guestbooks span{
+	width: 60px;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 3px;
+	display: block;
+	float: left;
+	font-size: 12px;
+}
+
+#personal_main .house .personal_name_pic{
+	width: 120px;
+	height: 210px;
+	margin-left: 24px;
+	margin-top: 95px;
+	float: left;
+}
+
+
+
+#personal_main .house .personal_name_pic .pet_name{
+	width: 78px;
+	height: 31px;
+	margin-left: 20px;
+	margin-right: 22px;
+	line-height: 31px;
+	text-align: center;
+	float: left;
+	
+}
+#personal_main .house .personal_name_pic a{
+	width: 120px;
+	height: 120px;
+	margin-top: 59px;
+	display: inline-block;
+	float: left;
+	border: none;
+	text-decoration: none;
+}
+#personal_main .house .personal_name_pic .pet_pic{
+	width: 120px;
+	height: 120px;
+	display: inline-block;
+	float: left;
+}
+
+#personal_main a.next, #personal_main a.prev{
+	display: none;
+}
+#personal_main ul.pagination{
+	width: 185px;
+	margin-left: 60px;
+	margin-right: 60px;
+	text-align: center;
+}
+#personal_main ul.pagination li{
+	display: none;
+}
+#personal_main ul.pagination li.current{
+	height: 19px;
+	margin-top: 4px;
+	display: inline-block;
+}
+#personal_main ul.pagination li.current a{
+	text-decoration: none;
+	color: black;
+}
+
+#personal_main .house .mailbox, #personal_main .house .new_mailbox{
+	background: url('images/mail_box.png') no-repeat;
+	display: block;
+    float: right;
+    height: 159px;
+    width: 108px;
+	margin-left: 58px;
+	margin-top: 144px;
+}
+
+#personal_main .house .new_mailbox{
+	background: url('images/new_mail.png') no-repeat;
+	text-decoration: none;
+	color: black;
+}
+
+#personal_main .house .new_mailbox span{
+	width: 38px;
+	height: 38px;
+	margin-left: 8px;
+	margin-top: 6px;
+	text-align: center;
+	line-height: 38px;
+	display: block;
+}
+
+#personal_main .house .invite_friend, #personal_main .house .delete_friend{
+	background: url('images/invite_friend.png') no-repeat;
+	width: 88px;
+	height: 83px;
+	margin-top: 58px;
+	margin-left: 58px;
+	display: block;
+	float: left;
+}
+
+#personal_main .house .delete_friend{
+	background: url('images/delete_friend.png') no-repeat;
+	
+}
+
+
+#mail_list_main{
+	background: url('./images/mail_list.png') no-repeat;
+	width: 537px;
+	height: 329px;
+/* 	margin-top: 101px; */
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 7px;
+	padding-left: 18px;
+	margin-top: 40px;
+}
+
+
+/*mail*/
+#mail_list_class{
+	border-spacing: 10px;
+}
+
+#mail_list_class thead tr td{
+	background-color: #19d2fa;
+	height: 25px;
+	text-align: center;
+}
+
+.mail_list{
+	border-spacing: 10px;
+	width: 522px;
+	
+}
+
+.mail_list tbody.slide{
+	width: 522px;
+}
+
+.mail_list tbody tr, td{
+	
+}
+
+.mail_list tbody tr td.title, #mail_list_class thead tr  td.title{
+	width: 275px;
+}
+
+.mail_list tbody tr td.sender, #mail_list_class thead  tr td.sender{
+	width: 86px;
+}
+
+.mail_list tbody tr td.date, #mail_list_class thead  tr  td.date{
+	width: 96px;
+}
+
+.mail_list tbody tr td.del, #mail_list_class thead  tr  td.del{
+	width: 15px;
+}
+
+div.slides{
+	width: 522px;
+	height: 255px;
+}
+
+
+#mail_list_class thead tr td.del{
+	background-color: transparent;
+}
+
+img.read_image{
+	margin-top: 5px;
+	margin-bottom: -5px;
+}
+
+a.mail_link{
+	color: black;
+	text-decoration: none;
+}
+
+a.del_button{
+	width: 15px;
+	height: 13px;
+	display: block;
+	background: url('./images/delete.png');
+}
+
+#mail_list_main a.prev{
+	display: none;
+}
+
+#mail_list_main a.next{
+	display: none;
+}
+/*
+ul.pagination{
+	display: none;
+}
+*/
+
+#mail_list_main .pagination {
+	width:100px;
+}
+
+#mail_list_main .pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+#mail_list_main .pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url('./images/pagination.png');
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+#mail_list_main .pagination li.current a{
+	background-position:0 -12px;
+}
+
+
+
+div.mail_new, div.mail_nonew{
+	width: 174px;
+	height: 156px;
+	position: absolute;
+	top: 580px;
+	left: 720px;
+}
+
+div.mail_new{
+	background: url('./images/new.png');
+}
+div.mail_nonew{
+	background: url('./images/nonew.png');
+}
+
+div.mail_new div, div.mail_nonew div{
+	width: 63px;
+	height: 156px;
+	float: left;
+}
+
+a.recv_mail, a.send_mail{
+	display: inline-block;
+	width: 63px;
+	line-height: 35px;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+a.recv_mail{
+	margin-top: 24px;
+	height: 35px;
+}
+a.send_mail{
+	margin-top: 27px;
+	margin-bottom: 36px;
+	height: 36px;
+}
+
+span.unread_mail_rows{
+	display: block;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	margin-top: 6px;
+	margin-left: 15px;
+	text-align: center;
+	float: left;
+}
+
+div.new_mail_main, div.show_mail_main{
+	background: url('./images/mail.png');
+	width: 507px;
+	height: 360px;
+	padding: 94px 0px 0px 69px;
+	margin: 0 auto 0;
+}
+
+div.show_mail_main{
+	background: url('./images/readmail.png');
+}
+
+textarea.text{
+	width: 436px;
+	height: 158px;
+	resize: none;
+}
+
+div.text{
+	width: 467px;
+	height: 172px;
+	word-break: break-all;
+}
+
+table.content tbody tr td.tag{
+	width: 70px;
+}
+
+table.content tbody tr td input{
+	border: 1px solid #ccc;
+	background: white;
+	width: 368px;
+}
+
+.new_mail_main input.send, .new_mail_main a.back, .show_mail_main a.re_mail, .show_mail_main a.back{
+	display: block;
+	width: 77px;
+	height: 21px;
+	margin-left: 402px;
+	line-height: 21px;
+	font-size: 11px;
+	text-align: center;
+	
+}
+
+.show_mail_main a.re_mail{
+	text-decoration: none;
+	color: black;
+	margin-top: 18px;
+}
+
+.new_mail_main input.send{
+	border:none;
+	background: transparent;
+	cursor: pointer;
+	padding: 0;
+	line-height: 21px;
+	margin-top: 18px;
+}
+
+
+.new_mail_main a.back, .show_mail_main a.back{
+	text-decoration: none;
+	color: black;
+	margin-top: 8px;
+}
+
+#main{
+	max-height: 530px;
+}
+
+#edit_background{
+	background: url("images/register_background.png") no-repeat;
+	width: 640px;
+	height: 600px;
+}
+
+#edit_background form#personal_data_edit{
+	padding-left: 0px;
+}
+
+#edit_background form#password_edit{  
+	padding-left: 195px;
+}]
+
+#edit_background hr{
+	width: 320px;
+}
+
+#ui-datepicker-div {
+	font-size: 12px;
+}
+
+div#pet_select {
+	float:left;
+	width:150px;
+	height:180px;
+	margin-top: 55px;
+	margin-left: 45px;
+	margin-bottom: 158px;
+	text-align: center;
+}
+
+div#pet_select div.pet_pic{
+	background: url('../../../pet_game/templates/zh_tw/images/pets/120/default.png');
+	width: 120px;
+	height: 120px;
+	clear: both;
+	margin: 0 auto;
+}

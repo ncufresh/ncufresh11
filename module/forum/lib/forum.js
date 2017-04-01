@@ -1,0 +1,467 @@
+(function($) {
+    $.widget('ui.combobox', {
+        _create: function() {
+            var self = this;
+            var select = this.element.hide();
+            var selected = select.children(':selected');
+            var value = selected.val() ? selected.text() : '';
+            var input = this.input = $('<input>').attr('disabled', true).insertAfter(select).val(value).autocomplete({
+                delay: 0,
+                minLength: 0,
+                source: function(request, response) {
+                    var matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), 'i');
+                    response(select.children('option').map(function() {
+                        var text = $(this).text();
+                        if ( this.value && ( !request.term || matcher.test(text) ) ) return {
+                            label: text.replace(new RegExp('(?![^&;]+;)(?!<[^<>]*)(' + $.ui.autocomplete.escapeRegex(request.term) + ')(?![^<>]*>)(?![^&;]+;)', 'gi'), '<strong>$1</strong>'),
+                            value: text,
+                            option: this
+                        };
+                    }));
+                },
+                select: function(event, ui) {
+                    ui.item.option.selected = true;
+                    self._trigger('selected', event, {
+                        item: ui.item.option
+                    });
+                },
+                change: function(event, ui) {
+                    if ( !ui.item ) {
+                        var matcher = new RegExp('^' + $.ui.autocomplete.escapeRegex($(this).val()) + '$', 'i');
+                        var valid = false;
+                        select.children('option').each(function() {
+                            if ( $(this).text().match(matcher) ) {
+                                this.selected = valid = true;
+                                return false;
+                            }
+                        });
+                        if ( !valid ) {
+                            $(this).val('');
+                            select.val('');
+                            input.data('autocomplete').term = '';
+                            return false;
+                        }
+                    }
+                }
+            }).addClass('ui-widget ui-widget-content ui-corner-left');
+
+            input.data('autocomplete')._renderItem = function(ul, item) {
+                ul.addClass(select.attr('name'));
+                return $('<li></li>').data('item.autocomplete', item).append('<a>' + item.label + '</a>').appendTo(ul);
+            };
+
+            this.button = $('<button type="button">&nbsp;</button>').attr('tabIndex', -1 ).attr('title', 'Show All Items').insertAfter(input).button({
+                icons: {
+                    primary: 'ui-icon-triangle-1-s'
+                },
+                text: false
+            }).removeClass('ui-corner-all').addClass('ui-corner-right ui-button-icon').click(function() {
+                if ( input.autocomplete('widget').is(':visible') ) {
+                    input.autocomplete('close');
+                    return;
+                }
+                $(this).blur();
+                input.autocomplete('search', '');
+                input.focus();
+            });
+        },
+        destroy: function() {
+            this.input.remove();
+            this.button.remove();
+            this.element.show();
+            $.Widget.prototype.destroy.call(this);
+        }
+    });
+})(jQuery);
+
+function style() {
+    if ( !window.XMLHttpRequest && window.ActiveXObject ) {
+        // Microsoft: Friends don't let friends use Internet Explorer 6.
+        $('<div></div>').attr('id', 'ie6_warning').css({
+            height: 40,
+            left: (($('html').width() - 480) / 2),
+            position: 'absolute',
+            top: (($('html').height() - 40) / 2),
+            width: 480,
+            zIndex: 10000
+        }).hide().html('<img src="../../templates/zh_tw/images/ie6_alert.png" alt="IE6" id="ie6_warning"/><p>您正在使用一個<a href="http://www.ie6countdown.com">不受支援而且過時的瀏覽器</a>，請立即更新以取得最佳的瀏覽體驗。論壇只提供Internet Explorer 6.0以下瀏覽文章的功能。</p>').prependTo($('body')).fadeIn(1000, function() {
+            $(this).effect('highlight', 1000).effect('highlight', 1000).effect('highlight', 1000);
+        });
+        $('a.dialog, span.likes, a.like, div.moveup, div.movedown, a.edit, a.delete, a.push, div.commits > form').hide();
+        return false;
+    }
+    $('#threads *, #topic *, a.reply').each(function() {
+        $(this).css('background-image', $(this).css('background-image').replace(/\/blue\//, '/' + $('#style').text() + '/'));
+    });
+    switch ( $('#style').text() ) {
+        case 'red' :
+            $('#topic .commit').css('background-color', '#FBEDEB');
+            $('#topic .commits input').css('background-color', '#FBEDEB');
+            $('#topic .commits form').css('background-color', '#FBEDEB');
+            $('#topic .commits .end').css('background-color', '#EDB0AA');
+            $('#topic .commits form .end').css('background-color', '#EDB0AA');
+            break;
+        case 'green' :
+            $('#topic .commit').css('background-color', '#F2FAC4');
+            $('#topic .commits input').css('background-color', '#F2FAC4');
+            $('#topic .commits form').css('background-color', '#F2FAC4');
+            $('#topic .commits .end').css('background-color', '#CEEA6E');
+            $('#topic .commits form .end').css('background-color', '#CEEA6E');
+            break;
+        case 'purple' :
+            $('#topic .commit').css('background-color', '#F8F2FB');
+            $('#topic .commits input').css('background-color', '#F8F2FB');
+            $('#topic .commits form').css('background-color', '#F8F2FB');
+            $('#topic .commits .end').css('background-color', '#E2C8EE');
+            $('#topic .commits form .end').css('background-color', '#E2C8EE');
+            break;
+    }
+    $('.disabled').attr("disabled", true).css('opacity', 0.3);
+}
+
+function commits() {
+    var $id = 0;
+    $('.commits').each(function() {
+        var $obj = $(this);
+        var $size = $obj.find('.commit').size();
+        var $first = $obj.find('.commit:first');
+        var $last = $obj.find('.commit:last');
+        $obj.find('.commit').each(function() {
+            $(this).attr('id', 'commit-' + $id++);
+        });
+        if ( $size >= 6 ) {
+            $obj.find('.commit').hide();
+            $obj.find('.commit').slice(-6).show();
+            $obj.find('.commit:visible:first').slideUp(500);
+            if ( $size > 6 ) $obj.find('.moveup, .movedown').css('visibility', 'visible').unbind('click');
+        }
+        $obj.find('.moveup:visible').click(function() {
+            var $self = $obj.find('.commit:visible:first');
+            $obj.find('.movedown').css('opacity', 1);
+            if ( $('.commit:animated').size() ) return false;
+            if ( $self.attr('id') === $first.attr('id') ) return false;
+            $obj.find('.commit:visible:last').slideUp(500);
+            $self.prev().slideDown(500, function() {
+                if ( $(this).attr('id') === $first.attr('id') ) $obj.find('.moveup').css('opacity', 0.3);
+            });
+            return true;
+        });
+        $obj.find('.movedown:visible').click(function() {
+            var $self = $obj.find('.commit:visible:last');
+            $obj.find('.moveup').css('opacity', 1);
+            if ( $('.commit:animated').size() ) return false;
+            if ( $self.attr('id') === $last.attr('id') ) return false;
+            $obj.find('.commit:visible:first').slideUp(500);
+            $self.next().slideDown(500, function() {
+                if ( $(this).attr('id') === $last.attr('id') ) $obj.find('.movedown').css('opacity', 0.3);
+            });
+            return true;
+        });
+        if ( $obj.find('.commit:visible:first').attr('id') === $first.attr('id') ) {
+            $obj.find('.moveup').css('opacity', 0.3);
+        } else {
+            $obj.find('.moveup').css('opacity', 1);
+        }
+        if ( $obj.find('.commit:visible:last').attr('id') === $last.attr('id') ) {
+            $obj.find('.movedown').css('opacity', 0.3);
+        } else {
+            $obj.find('.movedown').css('opacity', 1);
+        }
+        if ( $obj.find('.commit').size() > $size ) {
+            $obj.find('.moveup').css('opacity', 1);
+        }
+    });
+};
+
+function dialog(text, options) {
+    if ( options == null ) options = {};
+    $('<div></div>').addClass('dialog').text(text).dialog({
+        buttons: $.extend(options, {
+            '關閉': function() {
+                $(this).dialog('close');
+            }
+        }),
+        draggable: false,
+        hide: 'fade',
+        modal: true,
+        resizable: false,
+        show: 'fade'
+    });
+}
+
+tinyMCE.create('tinymce.plugins.FreshWebBBCodePlugin', {
+    init: function(editor, url) {
+        var $obj = this;
+
+        editor.onBeforeSetContent.add(function(element, object) {
+            object.content = $obj['_freshweb_bbcode2html'](object.content);
+        });
+
+        editor.onPostProcess.add(function(element, object) {
+            if (object.set) object.content = $obj['_freshweb_bbcode2html'](object.content);
+            if (object.get) object.content = $obj['_freshweb_html2bbcode'](object.content);
+        });
+    },
+
+    _freshweb_html2bbcode: function(text) {
+        var $regex = function(re, str) {
+            text = text.replace(re, str);
+        };
+
+        text = tinyMCE.trim(text);
+
+        $regex(/<ul[^>]*>(.*?)<\/ul>/gi, '[list]\n$1[/list]');
+        $regex(/<ol type="(.*?)">(.*?)<\/ol>/gi, '[list=$1]\n$2[/list]');
+        $regex(/<ol[^>]*>(.*?)<\/ol>/gi, '[list=1]\n$1[/list]');
+        $regex(/<li>(.*?)<\/li>/gi, '[*]$1\n');
+        $regex(/<img.*?src=\"(.*?)\".*?\/>/gi, '[img]$1[/img]');
+        $regex(/<a.*?href=\"(.*?)\".*?>(.*?)<\/a>/gi, '[url=$1]$2[/url]');
+        $regex(/<p style=\"padding-left: ?(.*?);\">(.*?)<\/p>/gi, '[indent=$1]$2[/indent]');
+        $regex(/<span style=\"background-color: ?(.*?);\">(.*?)<\/span>/gi, '[background=$1]$2[/background]');
+        $regex(/<span style=\"color: ?(.*?);\">(.*?)<\/span>/gi, '[color=$1]$2[/color]');
+        $regex(/<font.*?color=\"(.*?)\".*?>(.*?)<\/font>/gi, '[color=$1]$2[/color]');
+        $regex(/<span style=\"text-decoration: ?underline;\">(.*?)<\/span>/gi, '[u]$1[/u]');
+        $regex(/<\/u>/gi, '[/u]');
+        $regex(/<u>/gi, '[u]');
+        $regex(/<\/(em|i)>/gi, '[/i]');
+        $regex(/<(em|i)>/gi, '[i]');
+        $regex(/<\/(strong|b)>/gi, '[/b]');
+        $regex(/<(strong|b)>/gi, '[b]');
+        $regex(/<br \/>/gi, '\n');
+        $regex(/<br\/>/gi, '\n');
+        $regex(/<br>/gi, '\n');
+        $regex(/<\/p>/gi, '\n');
+        $regex(/<p>/gi, '');
+        $regex(/&nbsp;|\u00a0/gi, ' ');
+        $regex(/&quot;/gi, '\"');
+        $regex(/&lt;/gi, '<');
+        $regex(/&gt;/gi, '>');
+        $regex(/&amp;/gi, '&');
+
+        $regex(/<\/?.+>/gi, '');
+
+        return text; 
+    },
+
+    _freshweb_bbcode2html: function(text) {
+        var $regex = function(re, str) {
+            text = text.replace(re, str);
+        };
+
+        text = tinyMCE.trim(text);
+
+        $regex(/\n/gi, '<br />');
+        $regex(/\[b\]/gi, '<strong>');
+        $regex(/\[\/b\]/gi, '</strong>');
+        $regex(/\[i\]/gi, '<em>');
+        $regex(/\[\/i\]/gi, '</em>');
+        $regex(/\[u\]/gi, '<u>');
+        $regex(/\[\/u\]/gi, '</u>');
+        $regex(/\[color=(.*?)\](.*?)\[\/color\]/gi, '<span style="color: $1">$2</span>');
+        $regex(/\[background=(.*?)\](.*?)\[\/background\]/gi, '<span style="background-color: $1">$2</span>');
+        $regex(/\[indent\](.*?)\[\/indent\]/gi, '<p style="margin-left: 30px">$1</p>');
+        $regex(/\[url=([^\]]+)\](.*?)\[\/url\]/gi, '<a href="$1">$2</a>');
+        $regex(/\[url\](.*?)\[\/url\]/gi, '<a href="$1">$1</a>');
+        $regex(/\[img=([^\]]+)\](.*?)\[\/img\]/gi, '<img src="$1" alt="$2" />');
+        $regex(/\[img\](.*?)\[\/img\]/gi, '<img src="$1" />');
+        $regex(/\[list\](.*?)\[\/list\]/gi, '<ul><li>$1</li></ul>');
+        $regex(/\[list=(.*?)\](.*?)\[\/list\]/gi, '<ol type="$1"><li>$2</li></ol>');
+        $regex(/\[\*\]/gi, '</li><li>');
+        $regex(/<li><br \/><\/li>/gi, '');
+        $regex(/<li\/>/gi, '');
+
+        return text; 
+    }
+});
+
+tinyMCE.PluginManager.add('freshbbcode', tinyMCE.plugins.FreshWebBBCodePlugin);
+
+tinyMCE.init({
+    theme: 'advanced',
+    plugins: 'freshbbcode',
+    theme_advanced_buttons1: 'bold, italic, underline, separator, bullist, numlist, indent, outdent, separator, forecolor, backcolor, undo, redo, link, unlink, image',
+    theme_advanced_buttons2: '',
+    theme_advanced_buttons3: '',
+    theme_advanced_toolbar_location: 'top',
+    theme_advanced_toolbar_align: 'left',
+    language: 'zh-tw',
+    skin : 'o2k7',
+    apply_source_formatting : false,
+    force_hex_style_colors : true
+});
+
+$(document).ready(function() {
+    var $sort = location.search.replace(/.*sort=(.*)/gi, '$1').replace(/&.*/gi, '');
+    var $category = location.search.replace(/.*category=(.*)/gi, '$1').replace(/&.*/gi, '');
+
+    if ( ! $sort ) $sort = 'latest';
+    $('#sort option[value="' + $sort + '"]').attr('selected', true);
+
+    style();
+
+    $('a.dialog').click(function() {
+        var $rel = $(this).attr('rel');
+        var $obj = $('<div></div>');
+        var $url = $(this).attr('href');
+
+        $obj.dialog({
+            autoOpen: false,
+            beforeClose: function() {
+                tinyMCE.execCommand('mceRemoveControl', true, 'textarea');
+                $obj.find('form').html('');
+                return true;
+            },
+            dialogClass: $rel,
+            draggable: false,
+            height: 480,
+            hide: 'fade',
+            modal: true,
+            resizable: false,
+            show: 'fade',
+            width: 640
+        }).load($url, null, function(response) {
+            var $form = $obj.find('form');
+            var isJSON = function(str) {
+                if (jQuery.trim(str) == '') return false;
+                str = str.replace(/\\./g, '@').replace(/"[^"\\\n\r]*"/g, '');
+                return (/^[,:{}\[\]0-9.\-+Eaeflnr-u \n\r\t]*$/).test(str);
+            };
+            if ( isJSON(response) ) {
+                response = $.parseJSON(response);
+                if ( response.message == '尚未登入！' || response.message == '你不能在這裡發表文章！' ) {
+                    dialog(response.message);
+                    return false;
+                }
+            }
+            $obj.dialog('open');
+
+            $obj.find('.category select').combobox();
+
+            $form.find('textarea').each(function() {
+                tinyMCE.execCommand('mceAddControl', true, 'textarea');
+            });
+
+            $obj.find('input[type="submit"]').click(function() {
+                tinyMCE.execCommand('mceRemoveControl', true, 'textarea');
+                $.post($url, $form.serialize(), function(result) {
+                    if ( result == 'SUCCESS' ) {
+                        $obj.dialog('close');
+                        location.reload();
+                    } else {
+                        result = $.parseJSON(result);
+                        tinyMCE.execCommand('mceAddControl', true, 'textarea');
+                        dialog(result.message);
+                        $('#token').val(result.token);
+                    }
+                });
+                return false;
+            });
+        });
+        return false;
+    });
+
+    var timer = function() {
+        $('iframe[src*="facebook"]').css('visibility', 'hidden');
+        setTimeout(timer, 500);
+    }
+    setTimeout(timer, 300);
+
+    $('a.delete').click(function() {
+        var $url = $(this).attr('href');
+        dialog('點選刪除將會永久刪除文章，你確定要刪除嗎？', {
+            '刪除': function() {
+                $.get($url, null, function(result) {
+                    if ( result == 'SUCCESS' ) {
+                        location.href = location.href.replace('thread.php', 'threads.php').replace(/&tid=[0-9]/, '');
+                    } else {
+                        result = $.parseJSON(result);
+                        dialog(result.message);
+                    }
+                });
+            }
+        });
+        return false;
+    });
+
+    $('.commits input').val('推文……').focusin(function() {
+        if ( $(this).val() == '推文……' ) {
+            $(this).val('');
+        }
+    }).focusout(function() {
+        if ( $(this).val() == '' ) {
+            $(this).val('推文……');
+        }
+    });
+    $('.commits').each(function() {
+        $(this).find('.commit:gt(5)').hide();
+    });
+    commits();
+
+    $('.commits form').submit(function () {
+        return false;
+    });
+
+    $('a.push').click(function() {
+        var $obj = $('#' + $(this).attr('rel'));
+        var $text = $('#nickname').text() + ': ' + $obj.find('input').val();
+        if ( $obj.find('input').val() == '推文……' ) {
+            dialog('請輸入推文內容！');
+            return false;
+        }
+        if ( $('.commit:animated').size() ) return false;
+        $.post($(this).attr('href'), $('#' + $(this).attr('rel')).serialize(), function(result) {
+            if ( result == 'SUCCESS' ) {
+                if ( $obj.siblings('.commit').size() >= 6 ) {
+                    $obj.siblings('.commit').hide();
+                    $obj.siblings('.commit').slice(-6).show();
+                    $obj.siblings('.commit:visible:first').slideUp(500);
+                }
+                $('<div></div>').addClass('commit').append($('<div></div>').addClass('end')).append($('<p></p>').text($text)).hide().insertBefore($obj.siblings('.movedown')).slideDown(500);
+                $obj.find('input').val('推文……').blur();
+                commits();
+                style();
+            } else {
+                result = $.parseJSON(result);
+                dialog(result.message);
+            }
+        });
+        return false;
+    });
+
+    $('.commits form input').keypress(function(event) {
+        if ( event.which == 13 ) {
+            $(this).parent().find('a.push').trigger('click');
+            return false;
+        }
+    });
+
+    $('a.like').click(function() {
+        $self = $(this);
+        $.get($self.attr('href'), null, function(result) {
+            if ( result == 'SUCCESS' ) {
+                $self.siblings('.likes').children('span').text(parseInt($self.siblings('.likes').children('span').text()) + 1);
+            } else {
+                result = $.parseJSON(result);
+                dialog(result.message);
+            }
+        });
+        return false;
+    });
+
+    $('#threads .header select').change(function() {
+        if ( location.search.match(/sort=/) ) {
+            location.search = location.search.replace('sort=' + $sort, 'sort=' + $(this).val());
+        } else {
+            location.search += (location.search.match(/\?/) ? '&' : '?') + 'sort=' + $(this).val();
+        }
+    });
+
+    $('#threads ul.category a, #threads a.catrgory').click(function() {
+        if ( location.search.match(/category=/) ) {
+            location.search = location.search.replace('category=' + $category, 'category=' + $(this).attr('href').replace(/#category-/, ''));
+        } else {
+            location.search += (location.search.match(/\?/) ? '&' : '?') + 'category=' + $(this).attr('href').replace(/#category-/, '');
+        }
+        return false;
+    });
+});

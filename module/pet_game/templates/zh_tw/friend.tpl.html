@@ -1,0 +1,19 @@
+<div class="friend_main">
+	<div class="friend_title">
+		<a class="close" href="#"></a>
+	</div>
+	<div class="friend_contents">
+		<{foreach name=foo from=$friends item=friend}>
+			<{if $smarty.foreach.foo.index mod 8 == 0 }><div class="friend_content"><{/if}>
+				<a class="friend_link" href="index.php?uid=<{$friend.friendid}>">
+					<div class="pet_pic"><img src="<{$friend.img_src}>"/></div>
+					<span><{$friend.nickname}></span>
+				</a>
+			<{if $smarty.foreach.foo.index mod 8 == 7 or $smarty.foreach.foo.iteration == $smarty.foreach.foo.total}></div><{/if}>
+		<{/foreach}>
+	</div>
+	<div class="pagination">
+		<a class="prev" href="#"></a>
+		<a class="next" href="#"></a>
+	</div>
+</div>

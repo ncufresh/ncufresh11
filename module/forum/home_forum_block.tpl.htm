@@ -1,0 +1,14 @@
+<div id="anno_main_block">
+  <{foreach from=$block_var.forum_array item=anno_item}>
+  <{if $anno_item.visible == 1 || $currmodule->is_admin() == TRUE}>
+  <div class="anno_item_block">
+    <span class="anno_item_title"><a class="anno_link" title="<{$anno_item.title}>" href="<{$currcfg.URL_ROOT_PATH}>/module/forum/forums.php?tid=<{$anno_item.id}>&fid=<{$anno_item.forum_id}>"><{if $anno_item.is_display == FALSE && $currmodule->is_admin() == TRUE}><span class="warning_msg">[尚未發布] </span> <{/if}><{$anno_item.title}></a></span>
+    <span class="anno_item_info"><{$anno_item.datetime}></span>
+  </div>
+  <{/if}>
+  <{/foreach}>
+  <div id="anno_title_block">
+	<a title="檢視所有文章" href="<{$currcfg.URL_ROOT_PATH}>/module/anno/list_anno.php">[檢視所有文章]</a>
+	</div>
+	<br class="clear" />
+</div>

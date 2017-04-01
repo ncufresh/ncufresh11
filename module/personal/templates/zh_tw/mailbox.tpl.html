@@ -1,0 +1,27 @@
+<{if $unread_mail_rows != 0}>
+	<div class="mail_new">
+		<div>
+			<a class="recv_mail" href="mail.php">
+				收信
+			</a>
+			<a class="send_mail" href="newmail.php">
+				寫信
+			</a>
+
+		</div>
+		<span class="unread_mail_rows">
+			<{$unread_mail_rows}>
+		</span>
+	</div>
+<{else if}>
+	<div class="mail_nonew">
+		<div>
+			<a class="recv_mail" href="mail.php">
+				收信
+			</a>
+			<a class="send_mail" href="newmail.php">
+				寫信
+			</a>
+		</div>
+	</div>
+<{/if}>

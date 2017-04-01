@@ -1,0 +1,152 @@
+<script type="text/javascript">
+$(document).ready(function() {
+    var refresh = function() {
+        $.getJSON(location, {action: 'forums'}, function(response) {
+            var parents = response.parents;
+            var data = response.forums;
+
+            $('tbody').html('');
+            for ( var index in data ) {
+                var forum = data[index];
+                $('tbody')
+                .append($('<tr></tr>')
+                        .append($('<td></td>').html($('<a></a>').attr('href', '?pid=' + forum.id).text(forum.name)))
+                        .append($('<td></td>').text(forum.description))
+                        .append($('<td></td>')
+                                .append($('<a></a>').attr('href', '?action=edit&fid=' + forum.id).attr('rel', index).addClass('edit').text('Edit').unbind().click(function() {
+                                    $(this).parents('tr').next().find('td').html($('<form></form>').attr('action', '?action=edit&fid=' + forum.id)
+                                        .append($('<ul></ul>')
+                                                .append($('<li></li>')
+                                                        .append($('<label></label>').attr('for', 'parent_id').text('上級論壇'))
+                                                        .append($('<select></select>').attr('id', 'parent_id').attr('name', 'parent_id')
+                                                                .append(function(id) {
+                                                                    var options = $('<select></select>')
+                                                                                  .append($('<option></option>').attr('value', 0).text('沒有上層論壇'));
+                                                                    for ( var parent in parents ) {
+                                                                        if ( id == parent ) {
+                                                                            options.append($('<option></option>').attr('value', parent).attr('selected', true).text(parents[parent]));
+                                                                        } else {
+                                                                            options.append($('<option></option>').attr('value', parent).text(parents[parent]));
+                                                                        }
+                                                                    }
+                                                                    return options.html();
+                                                                }(data[$(this).attr('rel')].parent_id))
+                                                        )
+                                                )
+                                                .append($('<li></li>')
+                                                        .append($('<label></label>').attr('for', 'name').text('論壇名稱'))
+                                                        .append($('<input></input>').attr('id', 'name').attr('name', 'name').attr('type', 'text').val(data[$(this).attr('rel')].name))
+                                                )
+                                                .append($('<li></li>')
+                                                        .append($('<label></label>').attr('for', 'categories').text('文章分類'))
+                                                        .append($('<input></input>').attr('id', 'categories').attr('name', 'categories').attr('type', 'text').val(data[$(this).attr('rel')].categories))
+                                                )
+                                                .append($('<li></li>')
+                                                        .append($('<label></label>').attr('for', 'description').text('論壇敘述'))
+                                                        .append($('<textarea></textarea>').attr('id', 'description').attr('name', 'description').text(data[$(this).attr('rel')].description))
+                                                )
+                                                .append($('<li></li>')
+                                                        .append($('<input></input>').attr('name', 'submit').attr('type', 'submit').click(function() {
+                                                            $.post($(this).parents('form').attr('action'), $(this).parents('form').serialize(), function(result) {
+                                                                if ( result == 'SUCCESS' ) {
+                                                                    refresh();
+                                                                } else {
+                                                                    dialog(result);
+                                                                }
+                                                            });
+                                                            return false;
+                                                        }))
+                                                )
+                                        )
+                                    ).parents('tr').slideDown(1000);
+                                    return false;
+                                }))
+                                .append($('<a></a>').attr('href', '?action=delete&fid=' + forum.id).addClass('delete').text('Delete').click(function() {
+                                    dialog('點選刪除將會永久刪除論壇，你確定要刪除嗎？', {
+                                        '刪除': function() {
+                                            $.get($(this).attr('href'), null, function(result) {
+                                                if ( result == 'SUCCESS' ) {
+                                                    refresh();
+                                                } else {
+                                                    dialog(result);
+                                                }
+                                            });
+                                        }
+                                    });
+                                    return false;
+                                }))
+                                .append($('<a></a>').attr('href', '?action=moveup&fid=' + forum.id).addClass('moveup').text('↑').click(function() {
+                                    $.get($(this).attr('href'), null, function(result) {
+                                        if ( result == 'SUCCESS' ) {
+                                            refresh();
+                                        } else {
+                                            dialog(result);
+                                        }
+                                    });
+                                    return false;
+                                }))
+                                .append($('<a></a>').attr('href', '?action=movedown&fid=' + forum.id).addClass('movedown').text('↓').click(function() {
+                                    $.get($(this).attr('href'), null, function(result) {
+                                        if ( result == 'SUCCESS' ) {
+                                            refresh();
+                                        } else {
+                                            dialog(result);
+                                        }
+                                    });
+                                    return false;
+                                }))
+                        )
+                )
+                .append($('<tr></tr>')
+                        .append($('<td></td>').attr('colspan', 3)).hide()
+                );
+            }
+        });
+    };
+    refresh();
+});
+</script>
+<h2>論壇管理</h2>
+<table cellspacing="1">
+    <thead>
+        <tr>
+            <th>名稱</th>
+            <th>敘述</th>
+            <th>動作</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                <form action="?action=add" method="post">
+                    <ul>
+                        <li>
+                            <label for="parent_id">上級論壇</label>
+                            <select id="parent_id" name="parent_id">
+                                <option value="0">沒有上級論壇</option>
+                                <{foreach from=$forums item=forum}>
+                                <option value="<{$forum.id}>"><{'&nbsp;'|str_repeat:$forum.depth}><{$forum.name}></option>
+                                <{/foreach}>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="categories">文章分類</label>
+                            <input id="categories" name="categories" type="text" />
+                        </li>
+                        <li>
+                            <label for="name">論壇名稱</label>
+                            <input id="name" name="name" type="text" />
+                        </li>
+                        <li>
+                            <label for="description">論壇敘述</label>
+                            <textarea id="description" name="description"></textarea>
+                        </li>
+                        <input name="submit" type="submit" />
+                    </ul>
+                </form>
+            </td>
+        </tr>
+    </tfoot>
+</table>

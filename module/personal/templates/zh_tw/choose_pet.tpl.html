@@ -1,0 +1,25 @@
+<div class="choose_pet_main">
+	<div class="top_menu">
+		<{foreach from=$top_menu item=value}>
+			<a href="<{$value.href}>"><{$value.name}></a>
+		<{/foreach}>
+	</div>
+	<div class="choose_pet">
+		<form action="choose_pet.php" method="post">
+			<table>
+				<tr>
+					<td>請選擇寵物：</td>
+					<td>
+						<select name="pet">
+						<{foreach from=$pet key=k item=value}>
+							<option value="<{$k}>"><{$value.1}></option>
+						<{/foreach}>
+						</select>
+					</td>
+					<td><{$message}></td>
+				</tr>
+				<tr><td><input type="submit" /></td></tr>
+			</table>
+		</form>
+	</div>
+</div>

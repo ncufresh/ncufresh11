@@ -1,0 +1,63 @@
+<ul id="pagination">
+<{if $pagination.page > 1}>
+    <li class="first">
+        <a href="<{$pagination.url}>&page=1">第一頁</a>
+    </li>
+<{else}>
+    <li class="first disabled">
+        <a href="#">第一頁</a>
+    </li>
+<{/if}>
+<{if $pagination.page > $pagination.prev}>
+    <li class="prev">
+        <a href="<{$pagination.url}>&page=<{$pagination.prev}>">上一頁</a>
+    </li>
+<{else}>
+    <li class="prev disabled">
+        <a href="#">上一頁</a>
+    </li>
+<{/if}>
+<{php}>
+$begin = $this->_tpl_vars['pagination']['page'] - 2;
+
+if ( $begin < 1 ) $begin = 1;
+
+$end = $begin + 4;
+
+if ( $end >= $this->_tpl_vars['pagination']['pages'] ) {
+    $end = $this->_tpl_vars['pagination']['pages'];
+    $begin = $end - 4;
+    if ( $begin < 1 ) $begin = 1;
+}
+
+if ( $begin > 1 ) echo '<li class="none">...</li>';
+
+for ( $i = $begin ; $i <= $end ; ++$i ) {
+    if ( $i == $this->_tpl_vars['pagination']['page'] ) {
+        echo '<li class="current">' . $i . '</li>';
+    } else {
+        echo '<li><a href="' . $this->_tpl_vars['pagination']['url'] . '&page=' . $i . '">' . $i . '</a></li>';
+    }
+}
+
+if ( $this->_tpl_vars['pagination']['pages'] - $end > 0 ) echo '<li class="none">...</li>';
+<{/php}>
+<{if $pagination.page < $pagination.next}>
+    <li class="next">
+        <a href="<{$pagination.url}>&page=<{$pagination.next}>">下一頁</a>
+    </li>
+<{else}>
+    <li class="next disabled">
+        <a href="#">下一頁</a>
+    </li>
+<{/if}>
+<{if $pagination.page < $pagination.pages}>
+    <li class="last">
+        <a href="<{$pagination.url}>&page=<{$pagination.pages}>">最終頁</a>
+    </li>
+<{else}>
+    <li class="last disabled">
+        <a href="#">最終頁</a>
+    </li>
+<{/if}>
+</ul>

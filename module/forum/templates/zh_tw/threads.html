@@ -1,0 +1,105 @@
+<div class="forum">
+<!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://ncufresh.snowtec.org/module/forum/templates/zh_tw/threads_ie6.css" />
+<![endif]-->
+    <div id="contents">
+        <div id="threads">
+        <span id="style"><{$style}></span>
+        <div id="breadcrumbs"><{$breadcrumbs}></div>
+
+        <div class="header">
+            <label for="sort">文章排序：</label>
+            <select id="sort" name="sort">
+                <option value="latest">依最新回覆</option>
+                <option value="replies">依回覆數量</option>
+                <option value="created">依發表時間</option>
+                <option value="like">依喜歡次數</option>
+            </select>
+
+            <{include file='zh_tw/pagination.html' pagination=$pagination}>
+        </div>
+
+        <a class="post dialog" href="post.php?action=post&fid=<{$fid}>" rel="post">發表文章</a>
+
+        <ul class="category">
+            <{if $fid != 4}>
+            <{if $cid == 0}>
+            <li class="current"><a href="#category-0">全部</a></li>
+            <{else}>
+            <li><a href="#category-0">全部</a></li>
+            <{/if}>
+            <{/if}>
+            <{foreach item=category from=$categories}>
+            <{if $category.id == $cid}>
+            <li class="current"><a href="#category-<{$category.id}>"><{$category.name}></a></li>
+            <{else}>
+            <li><a href="#category-<{$category.id}>"><{$category.name}></a></li>
+            <{/if}>
+            <{/foreach}>
+        </ul>
+
+        <table cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th class="left"></th>
+                    <th class="category">分類</th>
+                    <th class="title">標題</th>
+                    <th class="author">作者</th>
+                    <th class="replies">回</th>
+                    <th class="likes">讚</th>
+                    <th class="time">時間</th>
+                    <th class="right"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <{foreach item=thread from=$threads}>
+                <{if $thread.sticky}>
+                <tr class="sticky">
+                <{else}>
+                <tr>
+                <{/if}>
+                    <td class="left"></td>
+                    <td>
+                        <{if $thread.sticky}>
+                        <img src="<{$thread.cfilename}>" alt="<{$thread.cname}>" />
+                        <{else}>
+                        <a class="catrgory" href="#category-<{$thread.cid}>">
+                            <img src="<{$thread.cfilename}>" alt="<{$thread.cname}>" />
+                        </a>
+                        <{/if}>
+                    </td>
+                    <td class="title"><a href="thread.php?tid=<{$thread.id}>&fid=<{$fid}>"><{$thread.title}></a></td>
+                    <td><a href="../personal?info_id=<{$thread.author_id}>"><{$thread.nickname}></a></td>
+                    <td><{$thread.reply_times}></td>
+                    <td><{$thread.like}></td>
+                    <td class="time"><{$thread.date}><br /><{$thread.time}></td>
+                    <td class="right"></td>
+                </tr>
+                <{foreachelse}>
+                <tr>
+                    <td class="left"></td>
+                    <td colspan="6">沒有任何文章！</td>
+                    <td class="right"></td>
+                </tr>
+                <{/foreach}>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="left"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="right"></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div style="clear:both;margin-top:30px;">
+            <{include file='zh_tw/pagination.html' pagination=$pagination}>
+        </div>
+        </div>
+    </div>
+</div>

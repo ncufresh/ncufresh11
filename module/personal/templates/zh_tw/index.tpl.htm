@@ -1,0 +1,77 @@
+<div id="personal_main">
+	<div class="cloud">
+		<div class="personal_data">
+		<table>
+			<tr><td>姓名：</td><td><{$personal_data.name}></td></tr>
+			<tr><td>暱稱：</td><td><{$personal_data.nickname}></td></tr>
+			<tr><td>科系：</td><td><{$personal_data.department}></td></tr>
+			<tr><td>生日：</td><td><{$personal_data.birthday}></td></tr>
+			<tr><td>信箱：</td><td><{$personal_data.email}></td></tr>
+			<tr><td>高中：</td><td><{$personal_data.graduatedschool}></td></tr>
+			<tr><td>網頁：</td><td><a target="_blank" href="<{$personal_data.homepage}>"><{$personal_data.homepage}></a></td></tr>
+		</table>
+		</div>
+		<div class="introduction">
+			自我介紹：<{$personal_data.intro}>
+		</div>
+		<div id="edit_persoanl_data">
+		<{if $is_self == true}>
+			<form name="edit" action="personal_data_edit.php" method="post">
+				<input type="submit" value="修改個人資料" />
+			</form>
+		<{/if}>
+		</div>
+		<div class="personal_video" id="<{$vid}>" value="<{$is_me}>">
+		</div>
+	</div>
+	<div class="house">
+		<div class="personal_guestbooks">
+			<div class="slides">
+				<{if $guestbooks_is_valid == true}>
+					<{foreach name=foo from=$personal_guestbooks item=guestbook}>
+						<{if $smarty.foreach.foo.index mod 4 == 0 }><div class="slide"> <{/if}>
+							<div class="message">
+								<img class="photo" src="<{$guestbook.img_src}>" />
+								<div class="content">
+									<a class="personal_page_link" href="index.php?info_id=<{$guestbook.guestid}>"><{$guestbook.nickname}></a>:<{$guestbook.content}>
+								</div> 
+							</div>
+						<{if $smarty.foreach.foo.index mod 4 == 3 or $smarty.foreach.foo.iteration == $smarty.foreach.foo.total}></div><{/if}>
+					<{/foreach}>
+				<{else}>
+					<div class="private">
+						<strong>留言板目前不開放喔！必須成為好友後才能看到！</strong>
+					</div>
+				<{/if}>
+			</div>
+			<{if $guestbooks_is_valid == true}>
+				<form id="new_guestbook" action="index.php?info_id=<{$info_id}>" method="post">
+					<input class="new_gbook" name="content" type="text" value="留言..."/> 
+				</form>
+			<{/if}>
+			<span>滾輪換頁</span>
+		</div>
+		<div class="personal_name_pic">
+			<span class="pet_name">
+				<{$personal_data.pet_name}>
+			</span>
+			<a href="../pet_game/index.php?uid=<{$personal_data.uid}>"><img class="pet_pic" src="<{$personal_data.img_src}>" /></a>
+		</div>
+
+		<{if $is_self == true}>
+			<{if $unread_mail_rows == 0}>
+				<a class="mailbox" href="mail.php"></a>
+			<{else}>
+				<a class="new_mailbox" href="mail.php"><span><{$unread_mail_rows}></span></a>
+			<{/if}>
+		<{else}>
+			<{if $is_friend == false}>
+				<a class="invite_friend" href="index.php?action=invite&info_id=<{$info_id}>"></a>
+			<{else}>
+				<a class="delete_friend" href="index.php?action=del&did=<{$info_id}>"></a>
+			<{/if}>
+		<{/if}>
+		
+	</div>
+</div>
+<{$msg}>

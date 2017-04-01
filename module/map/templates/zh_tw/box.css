@@ -1,0 +1,38 @@
+div#box {
+	background: url("images/window/window.png") no-repeat;
+	margin: 40px 40px;
+	display:none;
+	float: left;
+	width: 570px;
+	height: 469px;
+	display: none;
+	position: absolute;
+	z-index: 100;
+}
+
+div.text {
+	margin: 40px 20px 10px 20px;
+	width: 526px;
+	height: 353px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	word-wrap: break-word;
+}
+div.text p {
+	margin: 8px 0;
+	font-size: 15px;
+	line-height:18px;
+}
+div.text img {
+	width: 230px;
+	height: 173px;
+	margin: 8px;
+}
+div.text img.port {
+	width: 173px;
+	height: 230px;
+	margin: 8px;
+}
+div.text table, tr, td {
+	border: 1px solid #666;
+}

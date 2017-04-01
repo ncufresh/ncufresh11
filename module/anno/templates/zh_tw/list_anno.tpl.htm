@@ -1,0 +1,35 @@
+<!--如果有訊息-->
+<{if $have_warning }>
+	<script type="text/javascript">
+	alert('<{$warning_msg}>');
+	</script>
+<{/if}>
+
+<div id="anno_upper"></div>
+<div id="anno_middle">
+
+	<div class="list_title">
+		<{if $currmodule->is_admin()}>
+			<a title="新增公告" href="edit_anno.php?action=new">[新增公告]</a>
+		<{/if}>
+	</div>
+	<{section name=i loop=$anno_array}>
+	<{if $anno_array[i].is_display == TRUE || $currmodule->is_admin() == TRUE}>
+
+	<div class="list_anno">
+		<div class="list_anno_info"><{$anno_array[i].datetime}></div><!--時間-->
+		<div class="list_anno_title"><!--標題-->
+		  	<a title="<{$anno_array[i].title}>" href="show_anno.php?tid=<{$anno_array[i].tid}>">
+		  	<{if $anno_array[i].is_display == 0 && $currmodule->is_admin() == 1}>
+		  	<span class="warning_msg">[尚未發布]</span>
+		  	<{/if}>
+		  	<{$anno_array[i].title}></a>
+		</div>
+
+		
+	</div>
+	<{/if}>
+	<{/section}>
+</div>
+
+<div id="anno_footer"></div>

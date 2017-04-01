@@ -1,0 +1,31 @@
+<div class="friend_pet_main">
+	<div class="friend_pet_actions">
+		<{foreach from=$interations key=type item=value}>
+			<div id="<{$type}>" class="action">
+				<a class="action_name" href=	"map.php?action=interation&pid=<{$pid}>&type=<{$type}>">
+				</a>
+			</div>
+		<{/foreach}>
+	</div>
+	<div class="friend_pet_pic">
+		<span class="pet_name"><{$pet_name}></span>
+		<img class="pet_pic" src="<{$img_src}>"/>
+		
+		<div class="exit"><a href="../personal/index.php?info_id=<{$pid}>"></a></div>
+	</div>
+	<div class="friend_pet_status">
+		<a class="help_button" href="help.php">
+		</a>
+		<div class="state">
+			<{foreach from=$pet_state key=k item=value}>
+				<{$value}>
+			<{/foreach}>
+		</div>
+	</div>
+</div>
+<div class="friend_pet_friend">
+</div>
+<div class="pet_interation">
+</div>
+<div class="pet_game_help">
+</div>

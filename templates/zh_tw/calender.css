@@ -1,0 +1,114 @@
+.week{
+	width: 555px ;
+	height: 20px ;
+	margin: 0px auto ;
+}
+
+.week div{
+	width: 45px ;
+	height: 20px ;
+	float: left ;
+	margin-left: 14px ;
+	margin-right: 20px ;
+}
+
+.container{
+	height: 140px ;
+}
+
+.container div{
+	float: left ;
+}
+
+.container .left{
+	width: 25px ;
+	height: 140px ;
+}
+
+.container .arrow:hover{
+	cursor: pointer ;
+}
+
+.container .arrow{
+	width: 25px ;
+	height: 25px ;
+	margin-top: 70px ;
+}
+
+.container .right{
+	width: 25px ;
+	height: 140px ;
+}
+	
+.container .left .arrow{
+	margin-left: 3px;
+}
+
+.container .right .arrow{
+}
+
+
+.container .main{
+	margin-left: 29px;
+	width: 497px ;
+	position: relative ;
+	overflow: hidden ;
+	margin-top: 35px;
+	margin-right: 20px ;
+}
+
+.container .main .row_date{
+	white-space: nowrap ;
+	line-height: 20px ;
+	height: 20px ;
+	width: 555px ;
+}
+
+.container .main .row_date div{
+	width: 71px ;
+	height: 20px ;
+	font-size: 10px ;
+	text-align: center ;
+	position: absolute ;
+}
+
+.container .main .row{
+	white-space: nowrap ;
+	line-height: 23px ;
+	height: 23px ;
+	width: 555px ;
+	overflow: hidden ;
+}
+
+.container .main .row div{
+	height: 20px ;
+	background: #f36f7b ;
+	float: left ;
+	position: absolute ;
+}
+
+.container .main .row a{
+	position: absolute ;
+	height: 20px ;
+	display: inline-block ;
+	margin-top: 0px ;
+	text-align: center ;
+	color: white ;
+	text-decoration: none ;
+}
+
+#bubble{
+	position: absolute ;
+	height: 25px ;
+	min-width: 50px ;
+	padding-left: 10px ;
+	padding-right: 10px ;
+	background: black ;
+	opacity: 0.8 ;
+	color: white ;
+	font-size: 12px ;
+	z-index: 2000 ;
+	text-align: center ;
+	padding-top: 5px ;
+	font-size: 16px ;
+}

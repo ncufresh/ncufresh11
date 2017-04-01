@@ -1,0 +1,22 @@
+<div class="life_main">
+	<div class="life_title">
+		<a class="close" href="#"></a>
+	</div>
+	<div class="life_contents">
+		<div class="life_content">
+			<{$content}> 
+			<{if $is_question_open}>
+				<p class="question">
+					Q:<{$question_array.question}>
+				</p>
+				<a class="yes" href="map.php?question_id=<{$question_array.id}>&action=answer&answer=1&type=<{$type}>&id=<{$id}>"></a>
+				<a class="no" href="map.php?question_id=<{$question_array.id}>&action=answer&answer=0&type=<{$type}>&id=<{$id}>"></a>
+				
+			<{/if}>
+		</div>
+	</div>
+	<div class="pagination">
+		<a class="prev" href="#"></a>
+		<a class="next" href="#"></a>
+	</div>
+</div>

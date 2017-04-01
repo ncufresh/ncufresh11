@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* -- main and global settings -- */
+#admin_main
+{
+	width: 720px;
+	min-height: 480px;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+#admin_main a:hover
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#admin_main li
+{
+	font-weight: bold;
+	font-size:12px;
+}
+
+.table_sec_title
+{
+	width: 672px;
+	padding: 4px;
+	background-color: #E0E0E0;
+	color:#666666;
+	font-weight: bold;
+}
+
+.table_item
+{
+	width: 672px;
+	padding: 4px;
+	font-size: 16px;
+	color: #333333;
+	border-bottom: dashed 1px #CCCCCC;
+}
+
+.table_item:hover
+{
+	background-color: #F6F6FF;
+}
+
+.column_left
+{
+	width: 160px;
+	min-height: 24px;
+	float: left;
+}
+
+.column_right
+{
+	width: 512px;
+	min-height: 24px;
+	float: left;
+}
+
+.item_title
+{
+	color: #999999;
+	font-weight: bold;
+}
+
+.item_desc
+{
+	font-size: 12px;
+}
+
+.dialog
+{
+	display: none;
+}
+
+.warning_block
+{
+	display: block;
+	min-height: 24px;
+	font-size: 16px;
+	font-weight: bold;
+	background-color:#FFCCCC;
+	color:#FF0000;
+}
+
+.tab_code
+{
+	padding-left: 40px;
+}
+
+.comment
+{
+	color: #66CC00;
+	font-size: 12px;
+}
+
+.admin_edit_main input
+{
+	width: 200px;
+}
+
+.admin_edit_left
+{
+	width: 120px;
+	float: left;
+	font-weight: bold;
+}
+
+.admin_edit_right
+{
+	width: 240px;
+	float: left;
+}
+
+.admin_edit_main
+{
+	width: 360px;
+	min-height: 16px;
+	padding: 4px 0px;
+	border-bottom: dashed 1px #999999;
+	font-size: 12px;
+}
+
+
+/* -- admin_module_edit -- */
+
+

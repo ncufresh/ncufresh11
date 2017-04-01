@@ -1,0 +1,85 @@
+<script type="text/javascript">
+function delete_anno(input_tid)
+{
+	var is_delete_checked = confirm("確認刪除此篇公告？");
+	if(is_delete_checked)
+	{
+		$.ajax({
+			url: 'delete_ext.php',
+			data: {
+				action: 'op_anno_delete',
+				tid: input_tid,
+			},
+			success: function(response){
+				location.href="list_anno.php?action=delete_success";
+			}
+		});
+	}
+}
+</script>
+
+<div id="anno_upper"></div>
+<div id="anno_middle">
+
+<{if $has_anno}>
+<div id="view_anno_main">
+  <div id="view_anno_info">
+   <h2 class="anno_title"><{$anno.title}></h2>
+   <span class="anno_time">時間：<{$anno.datetime}></span>
+   <span class="anno_author">作者：<{$anno.username}></span>
+   <{if $currmodule->is_admin() == TRUE}><p style="font-size:12px">管理功能：
+	   <a title="編輯公告" href="edit_anno.php?action=edit&tid=<{$anno.tid}>">[編輯公告]</a>
+	   <a title="刪除公告" onclick="delete_anno(<{$anno.tid}>);">[刪除公告]</a></p>
+   <{/if}>
+   </div>
+   <div id="view_anno_content">
+  <{$anno.contents}>
+  </div>
+</div>
+
+<{if $is_file_exist == TRUE || $is_link_exist == TRUE }>
+<div class="ext_header">
+
+<{if $is_link_exist == TRUE}>
+	<div class="ext_main">
+	  <div class="ext_left">[相關連結]</div>
+	  <div class="ext_right">
+	  <ol>
+	  <{section name=i loop=$link_array}>
+	  	<li>
+	  	<a title="<{$link_array[i].title}>" target="_blank" href="<{$link_array[i].path}>"><{$link_array[i].title}></a>
+	  	</li>
+	  <{/section}>
+	  </ol>
+	  </div>
+	  <br class="clear" />
+	</div>
+<{/if}>
+
+<{if $is_file_exist == TRUE}>
+	<div class="ext_main">
+	  <div class="ext_left">[附件檔案]</div>
+	  <div class="ext_right">
+	  <ol>
+	  	<{section name=i loop=$file_array}>
+	  	<li>
+	  	<a title="<{$file_array[i].title}>" target="_blank" href="<{$file_array[i].path}>"><{$file_array[i].title}></a>
+	  	</li>
+	  <{/section}>
+	  <ol>
+	  </div>
+	  <br class="clear" />
+	</div>
+<{/if}>
+</div>
+<{/if}>
+
+<{else}>
+<div class="anno_error">
+	<p style="margin-left:70px">錯誤！<br />找不到您所要求的文章。</p>
+	<iframe src="http://player.vimeo.com/video/26858445?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="500" height="290" frameborder="0" style="margin: 20px 0 20px 70px;"></iframe>
+</div>
+<{/if}>
+<div id="anno_return"><a href="list_anno.php"><img src="templates/zh_tw/images/return.png" /></a></div>
+</div>
+<div id="anno_footer"></div>

@@ -1,0 +1,78 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function(){
+		var h = eval($("#background_middle").css('height').toString().replace('px', ''));
+		$("#background_middle").css('height', Math.ceil(h/210) * 210);
+	});
+</script>
+
+
+
+
+    <{if $imgc==0}>
+	<a id="index0_active_pos" class="index0" href="schedule_menu.php"></a>
+	<{else}>
+	<a id="index0_pos" class="index0" href="schedule_menu.php"></a>
+	<{/if}>
+	
+	<{if $imgc==1}>
+		<a id="index1_active_pos" class="index1" href="menu.php?cid=1"></a>
+	<{else}>
+		<a id="index1_pos" class="index1" href="menu.php?cid=1"></a>
+	<{/if}>
+	
+	<{if $imgc==2}>
+		<a id="index2_active_pos" class="index2" href="menu.php?cid=2"></a>
+	<{else}>
+		<a id="index2_pos" class="index2" href="menu.php?cid=2"></a>
+	<{/if}>
+		
+	<{if $imgc==3}>
+		<a id="index3_active_pos" class="index3" href="menu.php?cid=3"></a>
+	<{else}>
+		<a id="index3_pos" class="index3" href="menu.php?cid=3"></a>
+	<{/if}>
+	
+		
+	<{if $imgc==4}>
+		<a id="index4_active_pos" class="index4" href="menu.php?cid=4"></a>
+	<{else}>
+		<a id="index4_pos" class="index4" href="menu.php?cid=4"></a>
+	<{/if}>
+
+	            <div id="background_up_pos" class="background_up">
+				
+						 <div id="title_pos"  class="Title">
+								<{section name=foo loop=$array_2D}>
+								
+											<{$array_2D[foo].name}>
+								<{/section}>
+						
+						</div>
+				
+				</div>
+							<div id="background_middle_pos" class="background_middle">
+
+											<div id="content_content_pos"class="content_content">
+
+												<{section name=foo loop=$array_2D}>
+
+															<{$array_2D[foo].content}>
+
+												<{/section}>
+											<div style="clear:both"></div>
+									
+											</div>
+											
+									
+									<div style="clear:both"></div>
+							
+							</div>
+							
+					<div id="bg_bottom_pos" class="BG_bottom_c">		
+					
+							<div id="background_content<{$imgc}>" class="background_bottomimg<{$imgc}>">
+							</div>
+					</div>				
+	

@@ -1,0 +1,13 @@
+www.youtube.com/watch?v=VIDEOID&...
+youtu.be/VIDEOID
+
+table:
+	id, account, videoId
+	
+embedded:
+	<iframe width="425" height="349"
+	src="http://www.youtube.com/embed/VIDEOID"
+	frameborder="0" allowfullscreen></iframe>
+	
+image:
+	http://i.ytimg.com/vi/VIDEOID/0.jpg

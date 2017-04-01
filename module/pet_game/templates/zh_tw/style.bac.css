@@ -1,0 +1,357 @@
+@charset "utf-8";
+/* CSS Document */
+
+.pet_game_main{
+	background: url('images/background.png');
+	width: 632px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.pet_game_main .pet_game_actions{
+	width: 632px;
+	height: auto;
+	/*height: 199px;*/
+	margin-top: 5px;
+	position: absolute;
+	z-index: 3;
+}
+
+.pet_game_main .pet_game_actions .action{
+	width: 117px;
+	height: atuo;
+	margin-left: 24px;
+	float: left;
+}
+
+.pet_game_main .pet_game_actions #eat {
+	margin-left: 77px;
+}
+
+.pet_game_main .pet_game_actions .action .action_name{
+	background: white;
+	width: 117px;
+	height: 42px;
+	cursor: pointer;
+}
+
+.pet_game_main .pet_game_actions #eat .action_name{
+	background: url('images/eat.png') no-repeat;
+}
+
+.pet_game_main .pet_game_actions #exercise .action_name{
+	background: url('images/exercise.png') no-repeat;
+
+}
+.pet_game_main .pet_game_actions #see_a_doctor .action_name{
+	background: url('images/see_a_doctor.png') no-repeat;
+}
+
+.pet_game_main .pet_game_actions #rest .action_name{
+	background: url('images/rest.png') no-repeat;
+}
+
+.pet_game_main .pet_game_actions .action .action_content{
+	width: 117px;
+	height: auto;
+	display: none;
+}
+
+.pet_game_main .pet_game_actions .action .action_content ul{
+	background: url('images/content_background.png') repeat-y;
+	width: 74px;
+	height: auto;
+	margin-left: 41px;
+	padding-right: 2px;
+	list-style: none;
+	text-align: center;
+	display: block;
+}
+
+.pet_game_main .pet_game_actions .action .action_content ul li a{
+	color: black;
+	text-decoration: none;
+	font-family: "微軟正黑體";
+}
+
+.pet_game_main .pet_game_actions .action .action_content .action_content_bottom{
+	background: url('images/content_bottom.png') no-repeat;
+	width: 76px;
+	height: 16px;
+	margin-left: 41px;
+}
+
+.pet_game_main .pet_game_pic{
+	width: 632px;
+	height: 240px;
+	margin-top: 130px;
+	position: absolute;
+	z-index: 2;
+}
+.pet_game_main .pet_game_pic .pet_name{
+	width: 117px;
+	height: 53px;
+	margin-left: 15px;
+	margin-top: 136px;
+	line-height: 53px;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	font-family: "微軟正黑體";
+}
+.pet_game_main .pet_game_pic .pet_pic{
+	width: 240px;
+	height: 240px;
+	margin-left: 70px;
+	float: left;
+}
+
+.pet_game_main .pet_game_pic div.exit{
+	background: url('images/exit.png');
+	width: 76px;
+	height: 75px;
+	margin-top: 120px;
+	margin-left: 97px;
+	display: inline-block;
+}
+.pet_game_main .pet_game_pic div.exit a{
+	width: 76px;
+	height: 46px;
+	display: inline-block;
+}
+
+.pet_game_main .pet_game_status{
+	width: 632px;
+	height: 94px;
+	margin-top: 406px;
+	position: absolute;
+	z-index: 1;
+}
+
+.pet_game_main .pet_game_status .help_button{
+	background: url('images/help.png') no-repeat;
+	width: 69px;
+	height: 87px;
+	margin-left: 15px;
+	display: block;
+	float: left;
+}
+
+.pet_game_main .pet_game_status .life_stick_background{
+	background: url('images/life_stick_background.png') no-repeat;
+	width: 141px;
+	height: 19px;
+	margin-left: 72px;
+	margin-top: 56px;
+	float: left;
+}
+
+.pet_game_main .pet_game_status .life_stick_background .life_stick_foreground{
+	background: url('images/life_stick_foreground.png') no-repeat;
+	width: 100%;
+	height: 19px;
+}
+
+.pet_game_main .pet_game_status .life_stick_background .life_value{
+	width: 141px;
+	height: 19px;
+	line-height: 19px;
+	text-align: center;
+	margin-top: -19px;
+	color: blue;
+	display: block;
+}
+
+.pet_game_main .pet_game_status .friend_button{
+	background: url('images/friend.png');
+	width: 84px;
+	height: 40px;
+	margin-left: 14px;
+	margin-top: 7px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+
+.pet_game_main .pet_game_status .log_button{
+	background: url('images/diary.png');
+	width: 89px;
+	height: 54px;
+	margin-left: 128px;
+	line-height: 54px;
+	text-align: center;
+	float: left;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+
+.pet_game_main .pet_game_status .state{
+	width: 240px;
+	height: 20px;
+	margin-left: 73px;
+	font-family: "微軟正黑體";
+	font-weight: bold;
+	float: left;
+}
+
+
+
+/*friend_pet*/
+.friend_pet_main{
+	background: url('images/background_friend.png');
+	width: 632px;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.friend_pet_main .friend_pet_actions{
+	width: 632px;
+	height: auto;
+	/*height: 199px;*/
+	margin-top: 5px;
+	position: absolute;
+	z-index: 3;
+}
+
+.friend_pet_main .friend_pet_actions .action{
+	width: 117px;
+	height: atuo;
+	margin-left: 24px;
+	float: left;
+}
+
+.friend_pet_main .friend_pet_actions #eat {
+	margin-left: 77px;
+}
+
+.friend_pet_main .friend_pet_actions .action .action_name{
+	background: white;
+	width: 117px;
+	height: 42px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.friend_pet_main .friend_pet_actions #eat .action_name{
+	background: url('images/eat.png') no-repeat;
+}
+
+.friend_pet_main .friend_pet_actions #exercise .action_name{
+	background: url('images/exercise.png') no-repeat;
+
+}
+.friend_pet_main .friend_pet_actions #walk .action_name{
+	background: url('images/walk.png') no-repeat;
+}
+
+.friend_pet_main .friend_pet_actions #read .action_name{
+	background: url('images/read.png') no-repeat;
+}
+
+.friend_pet_main .friend_pet_actions .action .action_content{
+	width: 117px;
+	height: auto;
+	display: none;
+}
+
+.friend_pet_main .friend_pet_actions .action .action_content ul{
+	background: url('images/content_background.png') repeat-y;
+	width: 74px;
+	height: auto;
+	margin-left: 41px;
+	padding-right: 2px;
+	list-style: none;
+	text-align: center;
+	display: block;
+}
+
+.friend_pet_main .friend_pet_actions .action .action_content ul li a{
+	color: black;
+	text-decoration: none;
+	font-family: "微軟正黑體";
+}
+
+.friend_pet_main .friend_pet_actions .action .action_content .action_content_bottom{
+	background: url('images/content_bottom.png') no-repeat;
+	width: 76px;
+	height: 16px;
+	margin-left: 41px;
+}
+
+.friend_pet_main .friend_pet_pic{
+	width: 632px;
+	height: 240px;
+	margin-top: 130px;
+	position: absolute;
+	z-index: 2;
+}
+.friend_pet_main .friend_pet_pic .pet_name{
+	width: 117px;
+	height: 53px;
+	margin-left: 15px;
+	margin-top: 136px;
+	line-height: 53px;
+	text-align: center;
+	display: inline-block;
+	float: left;
+	font-family: "微軟正黑體";
+}
+.friend_pet_main .friend_pet_pic .pet_pic{
+	width: 240px;
+	height: 240px;
+	margin-left: 70px;
+	float: left;
+}
+
+.friend_pet_main .friend_pet_pic div.exit{
+	background: url('images/exit.png');
+	width: 76px;
+	height: 75px;
+	margin-top: 120px;
+	margin-left: 97px;
+	display: inline-block;
+}
+
+.friend_pet_main .friend_pet_pic div.exit a{
+	width: 76px;
+	height: 46px;
+	display: inline-block;
+}
+
+
+.friend_pet_main .friend_pet_status{
+	width: 632px;
+	height: 94px;
+	margin-top: 406px;
+	position: absolute;
+	z-index: 1;
+}
+
+.friend_pet_main .friend_pet_status .help_button{
+	background: url('images/help.png') no-repeat;
+	width: 69px;
+	height: 87px;
+	margin-left: 15px;
+	display: block;
+	float: left;
+}
+
+.friend_pet_main .friend_pet_status .state{
+	width: 240px;
+	height: 20px;
+	margin-left: 288px;
+	margin-top: 54px;
+	font-family: "微軟正黑體";
+	font-weight: bold;
+	float: left;
+}
+
+.pet_interation{
+	width: 305px;
+	height: 246px;
+	display: none;
+}

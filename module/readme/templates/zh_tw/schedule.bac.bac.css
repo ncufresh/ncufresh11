@@ -1,0 +1,1543 @@
+#background_s8
+{
+background-image:url('schedule/AUG/aug--background.png');
+}
+
+#background_s9
+{
+background-image:url('schedule/SEP/sep-background.png');
+}
+
+#moveto9
+{
+background-image:url('schedule/AUG/right button.png');
+margin-left:440px;
+margin-top:50px;
+}
+
+#moveto8
+{
+background-image:url('schedule/SEP/left button.png');
+margin-left:240px;
+margin-top:50px;
+}
+/*MENU AUG*/
+#event1_normal
+{
+background-image:url('schedule/AUG/eventf1.png');
+margin-left:363px;
+margin-top:205px;
+}
+
+#event1_normal_next
+{
+background-image:url('schedule/AUG/eventf1_1.png');
+margin-left:45px;
+margin-top:295px;
+}
+
+#event1_normal:hover
+{
+background-image:url('schedule/AUG/eventf_hover1.png');
+margin-left:363px;
+margin-top:205px;
+}
+
+#event1_normal_next:hover
+{
+background-image:url('schedule/AUG/eventf_hover1_1.png');
+margin-left:45px;
+margin-top:295px;
+}
+
+#event1_red
+{
+background-image:url('schedule/AUG/eventuf1.png');
+margin-left:363px;
+margin-top:205px;
+}
+
+#event1_red_next
+{
+background-image:url('schedule/AUG/eventuf1_1.png');
+margin-left:45px;
+margin-top:295px;
+}
+
+#event1_red:hover
+{
+background-image:url('schedule/AUG/eventuf_hover1.png');
+
+}
+
+#event1_red_next:hover
+{
+background-image:url('schedule/AUG/eventuf_hover1_1.png');
+
+}
+
+#event2_normal
+{
+background-image:url('schedule/AUG/eventf2.png');
+margin-left:440px;
+margin-top:235px;
+}
+
+#event2_normal_next
+{
+background-image:url('schedule/AUG/eventf2_1.png');
+margin-left:45px;
+margin-top:325px;
+}
+
+#event2_normal:hover
+{
+background-image:url('schedule/AUG/eventf_hover2.png');
+margin-left:440px;
+margin-top:235px;
+}
+
+#event2_normal_next:hover
+{
+background-image:url('schedule/AUG/eventf_hover2_1.png');
+margin-left:45px;
+margin-top:325px;
+}
+
+#event2_red
+{
+background-image:url('schedule/AUG/eventuf2.png');
+margin-left:440px;
+margin-top:235px;
+}
+
+#event2_red_next
+{
+background-image:url('schedule/AUG/eventuf2_1.png');
+margin-left:45px;
+margin-top:325px;
+}
+
+#event2_red:hover
+{
+background-image:url('schedule/AUG/eventuf_hover2.png');
+margin-left:440px;
+margin-top:235px;
+}
+
+#event2_red_next:hover
+{
+background-image:url('schedule/AUG/eventuf_hover2_1.png');
+margin-left:45px;
+margin-top:325px;
+}
+
+#event3_normal
+{
+background-image:url('schedule/AUG/eventf3.png');
+margin-left:115px;
+margin-top:355px;
+}
+
+#event3_normal:hover
+{
+background-image:url('schedule/AUG/eventf_hover3.png');
+margin-left:115px;
+margin-top:355px;
+}
+
+#event3_red
+{
+background-image:url('schedule/AUG/eventuf3.png');
+margin-left:115px;
+margin-top:355px;
+}
+
+#event3_red:hover
+{
+background-image:url('schedule/AUG/eventuf_hover3.png');
+margin-left:115px;
+margin-top:355px;
+}
+
+#event4_normal
+{
+background-image:url('schedule/AUG/eventf4.png');
+margin-left:115px;
+margin-top:385px;
+}
+
+#event4_normal:hover
+{
+background-image:url('schedule/AUG/eventf_hover4.png');
+margin-left:115px;
+margin-top:385px;
+}
+
+#event4_red
+{
+background-image:url('schedule/AUG/eventuf4.png');
+margin-left:115px;
+margin-top:385px;
+}
+
+#event4_red:hover
+{
+background-image:url('schedule/AUG/eventuf_hover4.png');
+margin-left:115px;
+margin-top:385px;
+}
+
+#event5_normal
+{
+background-image:url('schedule/AUG/eventf5.png');
+margin-left:360px;
+margin-top:355px;
+}
+
+#event5_normal_next
+{
+background-image:url('schedule/AUG/eventf5_1.png');
+margin-left:45px;
+margin-top:430px;
+}
+
+#event5_red
+{
+background-image:url('schedule/AUG/eventuf5.png');
+margin-left:360px;
+margin-top:355px;
+}
+
+#event5_red_next
+{
+background-image:url('schedule/AUG/eventuf5_1.png');
+margin-left:45px;
+margin-top:430px;
+}
+
+#event5_normal:hover
+{
+background-image:url('schedule/AUG/eventf_hover5.png');
+margin-left:360px;
+margin-top:355px;
+}
+
+#event5_normal_next:hover
+{
+background-image:url('schedule/AUG/eventf_hover5_1.png');
+margin-left:45px;
+margin-top:430px;
+}
+
+#event5_red:hover
+{
+background-image:url('schedule/AUG/eventuf_hover5.png');
+margin-left:360px;
+margin-top:355px;
+}
+
+#event5_red_next:hover
+{
+background-image:url('schedule/AUG/eventuf_hover5_1.png');
+margin-left:45px;
+margin-top:430px;
+}
+/*SEP*/
+#event5_normal_nine
+{
+background-image:url('schedule/SEP/eventf_sep5.png');
+margin-left:360px;
+margin-top:150px;
+}
+
+#event5_normal_nine_next
+{
+background-image:url('schedule/SEP/eventf_sep5_1.png');
+margin-left:40px;
+margin-top:222px;
+}
+
+#event5_red_nine
+{
+background-image:url('schedule/SEP/eventuf_sep5.png');
+margin-left:360px;
+margin-top:150px;
+}
+
+#event5_red_nine_next
+{
+background-image:url('schedule/SEP/eventuf_sep5_1.png');
+margin-left:40px;
+margin-top:222px;
+}
+
+#event5_normal_nine:hover
+{
+background-image:url('schedule/SEP/eventf_hover_sep5.png');
+margin-left:360px;
+margin-top:150px;
+}
+
+#event5_normal_nine_next:hover
+{
+background-image:url('schedule/SEP/eventf_hover_sep5_1.png');
+margin-left:40px;
+margin-top:222px;
+}
+
+#event5_red_nine:hover
+{
+background-image:url('schedule/SEP/eventuf_hover_sep5.png');
+margin-left:360px;
+margin-top:150px;
+}
+
+#event5_red_nine_next:hover
+{
+background-image:url('schedule/SEP/eventuf_hover_sep5_1.png');
+margin-left:40px;
+margin-top:222px;
+}
+
+#event6_normal
+{
+background-image:url('schedule/SEP/eventf6.png');
+margin-left:525px;
+margin-top:180px;
+}
+
+#event6_normal_next
+{
+background-image:url('schedule/SEP/eventf6_1.png');
+margin-left:40px;
+margin-top:249px;
+}
+
+#event6_red
+{
+background-image:url('schedule/SEP/eventuf6.png');
+margin-left:525px;
+margin-top:180px;
+}
+
+#event6_red_next
+{
+background-image:url('schedule/SEP/eventuf6_1.png');
+margin-left:40px;
+margin-top:249px;
+}
+
+#event6_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover6.png');
+margin-left:525px;
+margin-top:180px;
+}
+
+#event6_normal_next:hover
+{
+background-image:url('schedule/SEP/eventf_hover6_1.png');
+margin-left:40px;
+margin-top:249px;
+}
+
+#event6_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover6.png');
+margin-left:525px;
+margin-top:180px;
+}
+
+#event6_red_next:hover
+{
+background-image:url('schedule/SEP/eventuf_hover6_1.png');
+margin-left:40px;
+margin-top:249px;
+}
+
+#event7_normal
+{
+background-image:url('schedule/SEP/eventf7.png');
+margin-left:195px;
+margin-top:249px;
+}
+
+#event7_red
+{
+background-image:url('schedule/SEP/eventuf7.png');
+margin-left:195px;
+margin-top:249px;
+}
+
+#event7_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover7.png');
+margin-left:195px;
+margin-top:249px;
+}
+
+#event7_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover7.png');
+margin-left:195px;
+margin-top:249px;
+}
+
+#event8_normal
+{
+background-image:url('schedule/SEP/eventf8.png');
+margin-left:276px;
+margin-top:249px;
+}
+
+#event8_red
+{
+background-image:url('schedule/SEP/eventuf8.png');
+margin-left:276px;
+margin-top:249px;
+}
+
+#event8_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover8.png');
+margin-left:276px;
+margin-top:249px;
+}
+
+#event8_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover8.png');
+margin-left:276px;
+margin-top:249px;
+}
+
+#event9_normal
+{
+background-image:url('schedule/SEP/eventf9.png');
+margin-left:360px;
+margin-top:249px;
+}
+
+#event9_red
+{
+background-image:url('schedule/SEP/eventuf9.png');
+margin-left:360px;
+margin-top:249px;
+}
+
+#event9_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover9.png');
+margin-left:360px;
+margin-top:249px;
+}
+
+#event9_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover9.png');
+margin-left:360px;
+margin-top:249px;
+}
+
+#event10_normal
+{
+background-image:url('schedule/SEP/eventf10.png');
+margin-left:440px;
+margin-top:249px;
+}
+
+#event10_red
+{
+background-image:url('schedule/SEP/eventuf10.png');
+margin-left:440px;
+margin-top:249px;
+}
+
+#event10_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover10.png');
+margin-left:440px;
+margin-top:249px;
+}
+
+#event10_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover10.png');
+margin-left:440px;
+margin-top:249px;
+}
+
+#event11_normal
+{
+background-image:url('schedule/SEP/eventf11.png');
+margin-left:110px;
+margin-top:276px;
+}
+
+#event11_red
+{
+background-image:url('schedule/SEP/eventuf11.png');
+margin-left:110px;
+margin-top:276px;
+}
+
+#event11_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover11.png');
+margin-left:110px;
+margin-top:276px;
+}
+
+#event11_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover11.png');
+margin-left:110px;
+margin-top:276px;
+}
+
+#event12_normal
+{
+background-image:url('schedule/SEP/eventf12_1.png');
+margin-left:277px;
+margin-top:303px;
+}
+
+#event12_red
+{
+background-image:url('schedule/SEP/eventuf12_1.png');
+margin-left:277px;
+margin-top:303px;
+}
+
+#event12_normal_next
+{
+background-image:url('schedule/SEP/eventf12_2.png');
+margin-left:40px;
+margin-top:370px;
+}
+
+#event12_red_next
+{
+background-image:url('schedule/SEP/eventuf12_2.png');
+margin-left:40px;
+margin-top:370px;
+}
+
+#event12_normal_next_next
+{
+background-image:url('schedule/SEP/eventf12_3.png');
+margin-left:40px;
+margin-top:470px;
+}
+
+#event12_red_next_next
+{
+background-image:url('schedule/SEP/eventuf12_3.png');
+margin-left:40px;
+margin-top:470px;
+}
+
+
+#event12_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover12_1.png');
+margin-left:277px;
+margin-top:303px;
+}
+
+#event12_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover12_1.png');
+margin-left:277px;
+margin-top:303px;
+}
+
+#event12_normal_next:hover
+{
+background-image:url('schedule/SEP/eventf_hover12_2.png');
+margin-left:40px;
+margin-top:370px;
+}
+
+#event12_red_next:hover
+{
+background-image:url('schedule/SEP/eventuf_hover12_2.png');
+margin-left:40px;
+margin-top:370px;
+}
+
+#event12_normal_next_next:hover
+{
+background-image:url('schedule/SEP/eventf_hover12_3.png');
+margin-left:40px;
+margin-top:470px;
+}
+
+#event12_red_next_next:hover
+{
+background-image:url('schedule/SEP/eventuf_hover12_3.png');
+margin-left:40px;
+margin-top:470px;
+}
+
+#event13_normal
+{
+background-image:url('schedule/SEP/eventf13.png');
+margin-left:360px;
+margin-top:330px;
+}
+
+#event13_red
+{
+background-image:url('schedule/SEP/eventuf13.png');
+margin-left:360px;
+margin-top:330px;
+}
+
+#event13_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover13.png');
+margin-left:360px;
+margin-top:330px;
+}
+
+#event13_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover13.png');
+margin-left:360px;
+margin-top:330px;
+}
+
+#event14_normal
+{
+background-image:url('schedule/SEP/eventf14_1.png');
+margin-left:440px;
+margin-top:330px;
+}
+
+#event14_red
+{
+background-image:url('schedule/SEP/eventuf14_1.png');
+margin-left:440px;
+margin-top:330px;
+}
+
+#event14_normal_next
+{
+background-image:url('schedule/SEP/eventf14_2.png');
+margin-left:40px;
+margin-top:430px;
+}
+
+#event14_red_next
+{
+background-image:url('schedule/SEP/eventuf14_2.png');
+margin-left:40px;
+margin-top:430px;
+}
+
+#event14_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover14_1.png');
+margin-left:440px;
+margin-top:330px;
+}
+
+#event14_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover14_1.png');
+margin-left:440px;
+margin-top:330px;
+}
+
+#event14_normal_next:hover
+{
+background-image:url('schedule/SEP/eventf_hover14_2.png');
+margin-left:40px;
+margin-top:430px;
+}
+
+#event14_red_next:hover
+{
+background-image:url('schedule/SEP/eventuf_hover14_2.png');
+margin-left:40px;
+margin-top:430px;
+}
+
+#event15_normal
+{
+background-image:url('schedule/SEP/eventf15.png');
+margin-left:195px;
+margin-top:400px;
+}
+
+#event15_red
+{
+background-image:url('schedule/SEP/eventuf15.png');
+margin-left:195px;
+margin-top:400px;
+}
+
+
+#event15_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover15.png');
+margin-left:195px;
+margin-top:400px;
+}
+
+#event15_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover15.png');
+margin-left:195px;
+margin-top:400px;
+}
+
+#event16_normal
+{
+background-image:url('schedule/SEP/eventf16.png');
+margin-left:193px;
+margin-top:490px;
+}
+
+#event16_red
+{
+background-image:url('schedule/SEP/eventuf16.png');
+margin-left:193px;
+margin-top:490px;
+}
+
+#event16_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover16.png');
+margin-left:193px;
+margin-top:490px;
+}
+
+#event16_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover16.png');
+margin-left:193px;
+margin-top:490px;
+}
+
+#event17_normal
+{
+background-image:url('schedule/SEP/eventf17.png');
+margin-left:275px;
+margin-top:510px;
+}
+
+#event17_red
+{
+background-image:url('schedule/SEP/eventuf17.png');
+margin-left:275px;
+margin-top:510px;
+}
+
+#event17_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover17.png');
+margin-left:275px;
+margin-top:510px;
+}
+
+#event17_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover17.png');
+margin-left:275px;
+margin-top:510px;
+}
+
+
+#event18_normal
+{
+background-image:url('schedule/SEP/eventf18.png');
+margin-left:195px;
+margin-top:530px;
+}
+
+#event18_red
+{
+background-image:url('schedule/SEP/eventuf18.png');
+margin-left:195px;
+margin-top:530px;
+}
+
+#event18_normal:hover
+{
+background-image:url('schedule/SEP/eventf_hover18.png');
+margin-left:195px;
+margin-top:530px;
+}
+
+#event18_red:hover
+{
+background-image:url('schedule/SEP/eventuf_hover18.png');
+margin-left:195px;
+margin-top:530px;
+}
+
+#back
+{
+background-image:url('schedule/button3-back.png');
+margin-left:530px;
+margin-top:530px;
+}
+
+
+/*MENU CLASS*/
+.back_but
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:52px;
+height:54px;
+}
+.background_scmenu
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:623px;
+height:600px;
+}
+
+.background_s9
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:640px;
+height:600px;
+}
+
+.Move9
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:29px;
+height:23px;
+}
+
+.Move8
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:29px;
+height:24px;
+}
+/**/
+.Event1_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:227px;
+height:22px;
+
+}
+
+.Event1_2
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:135px;
+height:22px;
+
+}
+
+.Event2_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:149px;
+height:24px;
+
+}
+
+.Event2_2
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:135px;
+height:24px;
+
+}
+
+.Event3_1
+{
+position:absolute;
+display:inline-block;
+float:left;
+width:65px;
+height:24px;
+
+}
+
+.Event4_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:228px;
+height:24px;
+
+}
+
+.Event5_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:227px;
+height:24px;
+
+}
+
+.Event5_2
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:298px;
+height:24px;
+
+}
+
+.Eventsep5_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:234px;
+height:22px;
+
+}
+
+.Eventsep5_2
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:468px;
+height:22px;
+
+}
+
+.Event6_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:69px;
+height:22px;
+
+}
+
+.Event6_2
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:61px;
+height:22px;
+
+}
+
+.Event7_1
+{
+display:inline-block;
+float:left;
+position:absolute;
+width:68px;
+height:22px;
+
+}
+
+.Event8_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:66px;
+height:22px;
+
+}
+
+.Event9_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:64px;
+height:22px;
+
+}
+
+.Event10_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:68px;
+height:22px;
+
+}
+
+.Event11_1
+{
+display:inline-block;
+float:left;
+position:absolute;
+width:392px;
+height:22px;
+
+}
+
+.Event12_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:314px;
+height:22px;
+
+}
+
+.Event12_2
+{
+position:absolute;
+display:inline-block;
+float:left;
+width:553px;
+height:22px;
+
+}
+
+.Event12_3
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:223px;
+height:16px;
+
+}
+
+.Event13_1
+{
+position:absolute;
+display:inline-block;
+float:left;
+width:64px;
+height:22px;
+
+}
+
+.Event14_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:152px;
+height:22px;
+
+}
+
+.Event14_2
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:223px;
+height:22px;
+
+}
+
+.Event15_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:68px;
+height:22px;
+
+}
+
+.Event16_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:314px;
+height:16px;
+
+}
+
+.Event17_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:232px;
+height:16px;
+
+}
+.Event18_1
+{
+display:inline-block;
+position:absolute;
+float:left;
+width:69px;
+height:16px;
+}
+/*///////////////////////////FOR   SCＣＯＮ//////*/
+/*SC CONTENT*/
+#unfinished_pos
+{
+background-image:url('schedule/button.png');
+margin-left: 378px;
+margin-top: 32px;
+}
+
+#type_pos
+{
+margin-left:298px;
+margin-top:37px;
+}
+
+
+#undo_pos
+{
+background-image:url('schedule/button1.png');
+margin-left: 378px;
+margin-top: 32px;
+}
+
+
+
+#index0_pos
+{
+
+background-image:url('readme/readme/content/button01.png');
+margin-left: 555px;
+margin-top: 10px;
+}
+
+#index0_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through01.png');
+margin-left:540px;
+}
+
+#index0_active_pos
+{
+
+background-image:url('readme/readme/content/button01.png');
+margin-left: 575px;
+margin-top: 10px;
+}
+
+#index0_active_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through01.png');
+margin-left: 548px;
+margin-top: 10px;
+}
+
+#index1_pos
+{
+
+background:url('readme/readme/content/button02.png') no-repeat;
+margin-left: 555px;
+margin-top: 78px;
+}
+
+#index1_pos:hover
+{
+
+background:url('readme/readme/content/mouse-through02.png') no-repeat;
+	margin-left: 540px;
+margin-top: 78px;
+}
+
+#index1_active_pos
+{
+	background:url('readme/readme/content/button02.png');
+	margin-left: 570px;
+	margin-top: 78px;
+	/*width:129px;
+	height:60px;*/
+}
+
+#index1_active_pos:hover
+{
+	background:url('readme/readme/content/mouse-through02.png');
+	margin-left: 540px;
+	margin-top: 78px;
+	/*width:129px;
+	height:60px;*/
+}
+#index2_pos
+{
+
+background-image:url('readme/readme/content/button03.png');
+margin-left: 555px;
+margin-top: 146px;
+}
+
+#index2_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through03.png');
+	margin-left: 540px;
+}
+
+#index2_active_pos
+{
+
+background-image:url('readme/readme/content/button03.png');
+margin-left: 570px;
+margin-top: 146px;
+}
+
+#index2_active_pos:hover
+{
+	margin-left: 540px;
+background-image:url('readme/readme/content/mouse-through03.png');
+
+}
+
+#index3_pos
+{
+
+background-image:url('readme/readme/content/button04.png');
+margin-left: 555px;
+margin-top: 220px;
+}
+
+#index3_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through04.png');
+	margin-left: 540px;
+}
+
+#index3_active_pos
+{
+
+background-image:url('readme/readme/content/button04.png');
+margin-left: 570px;
+margin-top: 220px;
+}
+
+#index3_active_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through04.png');
+margin-left: 540px;
+}
+
+
+#index4_pos
+{
+
+background-image:url('readme/readme/content/button05.png');
+margin-left: 555px;
+margin-top: 290px;
+}
+
+#index4_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through05.png');
+margin-left: 540px;
+}
+
+#index4_active_pos
+{
+
+background-image:url('readme/readme/content/button05.png');
+margin-left: 570px;
+margin-top: 290px;
+}
+
+#index4_active_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through05.png');
+margin-left: 540px;
+}
+
+#index5_0
+{
+
+background-image:url('readme/readme/content/buttonback05.png');
+margin-left: 548px;
+margin-top: 310px;
+}
+/*沒有錯喔*/
+#title_pos
+{
+margin-left:40px;
+margin-top:40px;
+
+}
+#background_middle_pos
+{
+background-image:url('readme/readme/content/all_background_middle.png');
+}
+
+#background_up_pos
+{
+background-image:url('readme/readme/content/sc_background_top.png');
+}
+
+#bg_bottom_pos1
+{
+background-image:url('readme/readme/content/all_background_bottom.png');
+}
+
+#bg_bottomimg_pos
+{
+margin-left:400px;
+background-image:url('readme/readme/content/to-do-pic_03.png');
+}
+
+
+#content_content_pos
+{
+margin-left: 50px;
+margin-top: 32px;
+}
+
+#table_up
+{
+margin-left: 50px;
+margin-top: 55px;
+
+}
+#table_in
+{
+margin-left: 50px;
+margin-top: 100px;
+
+}
+
+
+/*class*/
+/*沒有錯喔*/
+.Title
+{
+width:AUTO;
+height:30px;
+display: inline-block;
+float: left;
+font-size:18px;
+position: absolute;
+}
+
+.Type
+{
+width:auto;
+height:40px;
+display: inline-block;
+float: left;
+position: absolute;
+}
+.index0
+{
+font-size:25px;
+display: block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index0:hover
+{
+display: block;
+float: left;
+height: 54px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+.index1
+{
+display: block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index1:hover
+{
+display: block;
+float: left;
+height: 55px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+
+.index2
+{
+display: block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index2:hover
+{
+display: block;
+float: left;
+height: 56px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+.index3
+{
+display:block;
+float: left;
+height: 43px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index3:hover
+{
+display:block;
+float: left;
+height: 57px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+
+.index4
+{
+display: block;
+float: left;
+height: 41px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index4:hover
+{
+display: block;
+float: left;
+height: 56px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+.undo_c
+{
+display: inline-block;
+float: left;
+height: 26px;
+position: absolute;
+width: 77px;
+z-index:2111;
+}
+
+
+
+.unfinished_c
+{
+display: inline-block;
+float: left;
+height: 26px;
+position: absolute;
+width: 77px;
+z-index:2111;
+}
+
+.content_content
+{
+display: block;
+float: left;
+width: 500px;
+/*height:auto;*/
+
+min-height: 360px;
+font-size: medium;
+line-height: 30px;
+color:#59381d;
+font-weight: bold;
+Font-Family: "Microsoft JhengHei",Arial;
+/*TEXT-ALIGN: center;*/
+text-decoration: bold;
+z-index: 1005;
+
+}
+.background_middle
+{
+display: inline-block;
+float: left;
+
+width: 625px;
+/*height:inherit;*/
+min-height: 210px;
+z-index: 1005;
+
+
+
+}
+
+.background_up
+{
+display: inline-block;
+float: left;
+position: relative;
+width: 625px;
+/*height:inherit;*/
+height: 70px;
+z-index: 1005;
+
+
+
+}
+.BG_bottom
+{
+display: inline-block;
+position: relative;
+float: left;
+width: 625px;
+height: 238px;
+z-index: 1005;
+
+}
+
+
+
+.BG_bottomimg
+{
+display: inline-block;
+float: left;
+position: relative;
+width: 185px;
+/*height:inherit;*/
+height: 183px;
+z-index: 1005;
+
+}

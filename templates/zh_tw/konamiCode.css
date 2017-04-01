@@ -1,0 +1,41 @@
+body{
+	/*overflow-x : hidden ;*/
+}
+
+#mOverlay{
+	position : absolute ;
+	top : 0px ;
+	left : 0px ;
+	zoom : 1 ;
+	opacity : 0.8 ;
+	background : black ;
+	overflow : hidden ;
+	z-index : 3000 ;
+}
+
+#mCenter{
+	position : absolute ;
+	background : black ;
+	border : white solid 2px ;
+	z-index : 3000 ;
+}
+
+#mBottom{
+	position : absolute ;
+	border : white solid 2px ;
+	background : white ;
+	z-index : 3000 ;
+}
+
+#closelabel{
+	background : url("closelabel.gif") ;
+	width : 66px ;
+	height : 22px ;
+	display : block ;
+	float : right ;
+	z-index : 3000 ;
+}
+
+#closelabel:hover{
+	cursor: pointer ;
+}

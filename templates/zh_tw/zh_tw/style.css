@@ -1,0 +1,331 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	background: #dbf5fe;
+}
+
+#header{
+	background: url("images/header_background.png") repeat-x;
+	height: 181px;
+}
+
+#logo{
+	background: url("images/banner.png") no-repeat;
+	width: 1024px;
+	height: 181px;
+	margin: auto;
+}
+
+#top {
+	padding-top: 9px;
+}
+
+#online {
+	padding-left: 660px;
+	width: 65px;
+	font-size: 14px;
+}
+
+#count {
+	padding-left: 120px;
+	width: 65px;
+	font-size: 14px;
+}
+
+#search_content {
+ 	border: 2px solid #666666;
+    width: 100px;
+    margin-left: 42px;
+}
+
+#search {
+ 	background: url("images/search.png") no-repeat;
+ 	width: 24px;
+ 	height: 24px;
+ 	border: none;
+ 	display: inline;
+}
+
+#navi {
+	margin-left: 694px;
+	margin-top: 92px;
+}
+
+#navi a{
+	font-size: 14px;
+	text-decoration: none;
+}
+
+#index{
+
+}
+
+#map{
+	margin-left: 24px;
+}
+
+#contact{
+	margin-left: 16px;
+}
+
+#ncu{
+	margin-left: 16px;
+}
+
+/* END OF HEARDER */
+
+#body{
+	width: 1024px;
+	height: auto;
+	margin: auto;
+	min-height: 536px;
+}
+
+#sidebar_left {
+    background: url("images/sidebar_left.png") no-repeat;
+    list-style: none;
+    margin-left: 26px;
+    min-height: 500px;
+    width: 120px;
+    float: left;
+}
+
+#sidebar_left li {
+    background: url("images/button.png");
+    height: 45px;
+    line-height: 45px;
+    margin: 10px 0;
+    text-align: center;
+    width: 120px;
+}
+
+#sidebar_left a {
+    background-position: 10px;
+    background-repeat: no-repeat;
+    display: block;
+    text-indent: -10000px;
+}
+
+#sidebar_left .must a {
+    background-image: url("images/must.png");
+}
+
+#sidebar_left .must a:hover {
+    background-image: url("images/must_hover.png");
+}
+
+#sidebar_left .life a {
+    background-image: url("images/life.png");
+}
+
+#sidebar_left .life a:hover {
+    background-image: url("images/life_hover.png");
+}
+
+#sidebar_left .map a {
+    background-image: url("images/map.png");
+}
+
+#sidebar_left .map a:hover {
+    background-image: url("images/map_hover.png");
+}
+
+#sidebar_left .forum a {
+    background-image: url("images/forum.png");
+}
+
+#sidebar_left .forum a:hover {
+    background-image: url("images/forum_hover.png");
+}
+
+#sidebar_left .club a {
+    background-image: url("images/club.png");
+}
+
+#sidebar_left .club a:hover {
+    background-image: url("images/club_hover.png");
+}
+
+#sidebar_left .film a {
+    background-image: url("images/film.png");
+}
+
+#sidebar_left .film a:hover {
+    background-image: url("images/film_hover.png");
+}
+
+#sidebar_left .about a {
+    background-image: url("images/about.png");
+}
+
+#sidebar_left .about a:hover {
+    background-image: url("images/about_hover.png");
+}
+
+#main {
+	width: 640px;
+	height: 500px;
+	margin: auto;
+	float: left;
+	margin-left: 40px;
+}
+
+#calender {
+    background: url("images/calendar.png");
+    height: 160px;
+    margin: 0 15px;
+    width: 605px;
+}
+
+#latest{
+	width : 620px ;
+	height : 200px ;
+	padding-left: 9px ;
+}
+
+#latest div {
+    margin: 0px;
+}
+
+#latest table{
+	margin-left : 12px ;
+	margin-top : 10px ;
+}
+
+#latest .left {
+	background: url("images/box.png") no-repeat;
+    float: left;
+    width: 300px;
+    height: 200px;
+}
+
+#latest .right {
+	background: url("images/box.png") no-repeat;
+    float: right;
+    width: 300px;
+    height: 200px;
+	margin-left : 10px;
+}
+
+#latest h4 {
+    background-repeat: no-repeat;
+    text-indent: -10000px;
+    margin-left: 10px;
+	margin-top: 15px;
+	width: 65px;
+	height: 20px;
+}
+
+#latest .left h4 {
+    background-image: url("images/news.png");
+}
+
+#latest .right h4 {
+    background-image: url("images/latest.png");
+}
+
+#loginbox {
+    background: url("images/loginbox_top.png") no-repeat;
+    padding-top: 70px;
+}
+
+#board {
+    background: url("images/board.png") no-repeat;
+    height: 249px;
+    width: 605px;
+    margin: auto;
+}
+
+#sidebar_right {
+    float: right;
+    width: 170px;
+}
+
+#loginbox div {
+    background: #FFD581;
+    margin-left: 2px;
+    width: 150px;
+}
+
+#loginbox p	{
+	font-size: 14px;
+	padding-left: 8px;
+	padding-top: 5px;
+}
+
+#loginbox #account {
+	width: 80px;
+	margin-left: 6px;
+}
+
+ #loginbox #password {
+	width: 80px;
+	margin-left: 6px;
+}
+
+#loginbutton {
+    background: url("images/login.png") no-repeat;
+    border: none;
+    width: 40px;
+    height: 25px;
+    text-indent: -10000px;
+    margin-left: 53px;
+	margin-top: 5px;
+}
+
+#registerbutton {
+    background: url("images/register.png") no-repeat;
+    border: none;
+    width: 40px;
+    height: 25px;
+    text-indent: -10000px;
+}
+
+#videobox {
+    background: url("images/videobox_top.png") no-repeat 0 -2px;
+    padding-top: 82px;
+    width: 155px;
+    height: 65px;
+}
+
+#videobox div {
+    background: url("images/videobox_background.png");
+    height: 65px;
+}
+
+#videobox_end {
+    background: url("images/videobox_end.png") no-repeat 0 -6px;
+    height: 167px;
+    width: 155px;
+}
+
+#footer {
+	width: 1024px;
+	margin: auto;
+}
+
+#footer_center {
+	background: url("images/footer_center.png") no-repeat;
+	width: 1024px;
+	height: 110px;
+}
+

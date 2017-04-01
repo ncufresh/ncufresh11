@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* -- anno block -- */
+
+.anno_main_block{
+	width: 293px;
+	height: auto;
+	padding-left : 10px ;
+}
+
+.anno_title_block{	width: 85px;	height: 15px;	padding: 9px 20px 0px 0px;	font-size: 12px;	text-align: right; text-color; float:right; margin-top: 3px;}
+.anno_title_block a{color: #323232;}
+
+.anno_item_block
+{
+	width: 273px;
+	height: 10px;
+	padding: 0 0 4px 0;
+	border-bottom: #999999 dashed 1px;
+	margin: 8px 0 4px 5px;
+	line-height: 14px;
+}
+
+.anno_item_title
+{
+	width: 193px;
+	float: left;
+	display: block;
+}
+
+.anno_item_title a{	font-size: 12px;	color: #302e33;}
+
+.anno_item_info
+{
+	width: 80px;
+	font-size: 12px;
+	color: #999999;
+	
+	display: block;
+	float: left;
+}
+/*  -- end anno block */
+
+span.warning_msg {
+	color: red;
+}
+
+div#anno_upper {
+	height: 30px;
+	background: url('images/upper.png') no-repeat;
+}
+
+div#anno_middle {
+	background: url('images/middle.png') repeat-y;
+}
+
+div#anno_middle div.list_title {
+	background: url('images/view_anno.png') no-repeat;
+	width: 640px;
+	height: 64px;
+	padding: 10px 0 10px 30px;
+}
+
+div#anno_middle div.list_title a {
+	color: white;
+}
+
+div#anno_middle div.list_anno {
+	margin: 6px 0 0 20px;
+	height: 22px;
+	line-height: 22px;
+	word-wrap: break-word;
+	
+}
+
+div#anno_middle div.list_anno_info {
+	font-size: 12px;
+	width: 140px;
+	float: left;
+}
+
+div#anno_middle div.list_anno_title {
+	font-size: 16px;
+}
+
+div#anno_footer {
+	height: 30px;
+	background: url('images/footer.png') no-repeat;
+}
+div#view_anno_main {
+	background: url('images/show_anno.png') no-repeat;
+	width: 645px;
+	margin: 0 auto;
+	line-height: 24px;
+}
+div#view_anno_main #view_anno_info {
+	padding: 5px 0 0 26px;
+}
+
+div#view_anno_info h2.anno_title {
+	font-size: 24px;
+	font-weight: bold;
+	margin: 10px 0 8px;
+	text-shadow: 0 0 5px #FFFFFF;
+}
+
+div#view_anno_info span.anno_author {
+	margin-left: 220px;
+}
+
+div#view_anno_main #view_anno_content {
+	padding: 20px 20px 10px;
+	min-height: 200px;
+	word-wrap: break-word;
+}
+
+div.ext_header {
+	padding: 40px 20px 0 20px;
+	background: url('images/attach.png') no-repeat;
+	width: 630px;
+}
+div.ext_header div.ext_left {
+	font-size: 18px;
+	margin: 8px 0;
+}
+div.ext_header div.ext_right ol {
+	margin: 0 20px;
+	line-height:24px;
+}
+
+div#anno_return {
+	display: block;
+	margin: 0 0 0 550px;
+}
+
+div#edit_anno_main {
+	padding: 80px 20px 0 20px;
+	background: url('images/new_anno.png') no-repeat;
+	width: 630px;
+}
+div#edit_anno_main textarea.tinymce {
+	width: 593px;
+	height: 200px;
+}
+div#edit_anno_main .edit_var {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 4px 0;
+}
+div#edit_anno_main .edit_value {
+}

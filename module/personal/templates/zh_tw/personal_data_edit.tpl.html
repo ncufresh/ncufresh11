@@ -1,0 +1,65 @@
+<script>
+$(function() {
+	$( "#birID" ).datepicker({
+		showButtonPanel: true,
+		dateFormat: 'yy-mm-dd',
+		changeMonth: true,
+		changeYear: true,
+		regional: 'zh-TW',
+        defaultDate: '1992-01-01'
+	});
+});
+</script>
+
+<div id="edit_background">
+
+<div class="personal_main">
+	<div id="pet_select">
+		<{if $is_pet_dead == true}>
+			<form id="pet_select_form" action="personal_data_edit.php?id=choose_pet">
+				<div class="pet_pic"></div>
+				<label for="selectPetID">選擇寵物：</label>
+				<select name="pet" id="selectPetID" >
+					<option value="10">請選擇</option>
+					<{foreach from=$pet key=k item=value}>
+						<{if $k < $admin_pet_key_start}>
+							<option value="<{$k}>" ><{$value.1}></option>
+						<{/if}>
+					<{/foreach}>
+				</select>
+				<input type="submit" value="選擇" />
+			</form>
+		<{/if}>
+	</div>
+	<div class="personal_data_form">
+		<form id="personal_data_edit" action="personal_data_edit.php?id=data" method="post">
+			<table>
+			<tr><td>姓名：</td><td><input type="text" name="name" value="<{$personal_data.name}>"></td></tr>
+			<tr><td>暱稱：</td><td><input type="text" name="nickname" value="<{$personal_data.nickname}>"></td></tr>
+			<tr><td>生日：</td><td><input type="text" id="birID" name="birthday" value="<{$personal_data.birthday}>"></td></tr>
+			<tr><td>信箱：</td><td><input type="text" name="email" value="<{$personal_data.email}>"></td></tr>
+			<tr><td>畢業高中：</td><td><input type="text" name="graduatedschool" value="<{$personal_data.graduatedschool}>"></td></tr>
+			<tr><td>個人網頁：</td><td><input type="text" name="homepage" value="<{$personal_data.homepage}>"></td></tr>
+			<tr><td>自我介紹：</td><td><textarea name="intro"><{$personal_data.intro}></textarea></td></tr>
+			<tr><td>留言板：</td><td><input type="radio" name="guestbooks_public" value="1" <{if $personal_data.guestbooks_public == 1}>checked<{/if}> />開放
+									 <input type="radio" name="guestbooks_public" value="0" <{if $personal_data.guestbooks_public == 0}>checked<{/if}> />隱藏</td></tr>
+			<tr><td>個人影片</td><td><input name="video" value="http://www.youtube.com/watch?v=<{$personal_data.video}>" /></td></tr>
+			<tr><td><input type="hidden" name="postback" value="true"></td></tr>
+			<tr><td><input type="submit" value="修改資料" ></td></tr>
+			</table>
+		</form>
+	</div>
+	<hr />
+	<div class="password_edit">
+		<form id="password_edit" action="personal_data_edit.php?id=password" method="post">
+			<table>
+				<tr><td>原始密碼：</td><td><input type="password" name="password"/></td></tr>
+				<tr><td>新密碼：</td><td><input type="password" name="new_password"/></td></tr>
+				<tr><td>新密碼確認：</td><td><input type="password" name="new_password_check"/></td></tr>
+				<tr><td><input type="submit" value="修改密碼"/></td></tr>
+			</table>
+		</form>
+	</div>
+</div>
+<{$error_message}>
+</div>

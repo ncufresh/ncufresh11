@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+div#search_main
+{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	line-height: 18px;
+	color:#333333;
+	width: 640px;
+}
+
+div#search_upper {
+	height: 127px;
+}
+
+div#search_middle {
+	background: url('images/middle.png') repeat-y;
+}
+
+div#search_footer {
+	height: 30px;
+	background: url('images/footer.png') no-repeat;
+}
+span.loading {
+	text-align: center;
+	margin: 10px;
+}
+div#cse {
+	width: 600px;
+	margin: 0 auto;
+}
+div#cse p.search_error {
+	text-align: center;
+	padding: 20px 0 0;
+}

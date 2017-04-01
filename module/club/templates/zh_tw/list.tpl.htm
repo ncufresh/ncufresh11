@@ -1,0 +1,66 @@
+<div class="new_module_main">
+	<div id="<{$c}>_top">
+		<div class="piece">
+			<a href="index.php"><font color="<{$color}>"><b>系所社團</b></font></a>
+			<font color="<{$color}>"><b> > </b></font>
+			<a href="club_<{$c}>.php"><font color="<{$color}>"><b><{$club_data.category}></b></font></a>
+			<font color="<{$color}>"><b> > </b></font>
+			<a href="list.php?c_id=<{$club_data.id}>"><font color="<{$color}>"><b><{$club_data.club_name}></b></font></a>
+		</div>
+	</div>
+	<div id="main2">
+		<{if $club_data.img_1 != ""}>
+			<div class="aru_pic">
+			<a href="<{$club_data.img_1}>">
+			<img src="<{$club_data.img_1}>" width="274" height="187"/>
+			</a>
+			</div>
+		<{else}>
+			<div class="none_pic"></div>
+		<{/if}>
+		<{if $club_data.img_2 != ""}>
+			<div class="aru_pic">
+			<a href="<{$club_data.img_2}>">
+			<img src="<{$club_data.img_2}>" width="274" height="187"/>
+			</a>
+			</div>
+		<{else}>
+			<div class="none_pic"></div>
+		<{/if}>
+		<div class="clear"></div>
+		<{if $c == "department"}>
+			<div class="list_title">‧系所簡介：</div>
+			<div class="list_content"><{$contents}></div>
+			<div class="list_title">‧系代：</div>
+			<div class="list_content">手機： <{$club_data.leader_phone}><br />
+									二進位ID： <{$club_data.leader_bbs}><br />
+									E-mail： <{$club_data.leader_email}></div>
+			<div class="list_title">‧副系代：</div>
+			<div class="list_content">手機： <{$club_data.vice_phone}><br />
+									二進位ID： <{$club_data.vice_bbs}><br />
+									E-mail： <{$club_data.vice_email}></div>
+			<div class="list_title">‧系所網站： </div>
+			<div class="list_content"><a href="<{$club_data.website}>"><{$club_data.website}></a></div>
+			<div class="list_title">‧二進位板名： </div>
+			<div class="list_content"><{$club_data.bbs_site}></div>
+
+		<{else}>
+			<div class="list_title">‧社團簡介：</div>
+			<div class="list_content"><{$contents}></div>
+			<div class="list_title">‧社長：</div>
+			<div class="list_content">手機： <{$club_data.leader_phone}><br />
+									二進位ID： <{$club_data.leader_bbs}><br />
+									E-mail： <{$club_data.leader_email}></div>
+			<div class="list_title">‧副社長：</div>
+			<div class="list_content">手機： <{$club_data.vice_phone}><br />
+									二進位ID： <{$club_data.vice_bbs}><br />
+									E-mail： <{$club_data.vice_email}></div>
+			<div class="list_title">‧社團網站： </div>
+			<div class="list_content"><a href="<{$club_data.website}>"><{$club_data.website}></a></div>
+			<div class="list_title">‧二進位板名： </div>
+			<div class="list_content"><{$club_data.bbs_site}></div>
+		<{/if}>
+	</div>
+	<div id="<{$c}>_bottom">
+	</div>
+</div>

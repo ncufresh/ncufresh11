@@ -1,0 +1,83 @@
+<link rel=stylesheet type="text/css" href="templates/zh_tw/subtpl.css">
+<script type="text/javascript">
+	mEvent = new Array() ;
+	<{section name=i loop=$calender}>
+		var temp = new Array() ;
+		<{section name=j start=0 loop=6}>
+			temp.push('<{$calender[i][j]}>') ;
+		<{/section}>
+		mEvent.push(temp) ;
+	<{/section}>
+	uEvent = new Array() ;
+	<{if $is_login}>
+	<{section name=i loop=$uEvent}>
+		uEvent.push('<{$uEvent[i]}>') ;
+	<{/section}>
+	<{/if}>
+</script>
+<img src="templates/zh_tw/images/end.jpg" />
+<div id="calender">
+	<div class="container">
+		<div class="left"><div class="arrow"></div></div>
+		<div class="main">
+			<table>
+				<tr><td class="row"></td></tr>
+				<tr><td class="row"></td></tr>
+				<tr><td class="row"></td></tr>
+				<tr><td class="row"></td></tr>
+				<tr><td class="row"></td></tr>
+				<tr><td class="row_date"></td><td><div style="width:5px;"></div></td></tr>
+			</table>
+		</div>
+		<div class="right"><div class="arrow"></div></div>
+	</div>
+</div>
+<div id="latest">
+	<div class="left">
+		<h4>最新消息</h4>
+		<{$anno_block}>
+ 	</div>
+	<div class="right">
+		<h4>最新論壇</h4>
+		<{$forum_block}>
+	</div>
+</div>
+<div id="board_height">
+	<div id="board">
+		<div id="link">
+			<table>
+			<tr>
+			<td><a target="_blank" href="https://portal.ncu.edu.tw/wps/portal/!ut/p/cxml/04_Sj9SPykssy0xPLMnMz0vM0Q_wyU_PzNMvSFdUBACQIYPZ">Portal入口</a></td>
+			<td><a target="_blank" href="http://puma.cc.ncu.edu.tw:8080/Course/main/news/announce">選課系統</a></td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="http://passport.ncu.edu.tw/">服務學習</a></td>
+				<td><a target="_blank" href="http://www.lib.ncu.edu.tw/cmain.php">圖書館首頁</a></td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="http://www.cc.ncu.edu.tw/">電算中心</a></td>
+				<td><a target="_blank" href="http://www.ncu.edu.tw/">中大首頁</a></td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="http://learn.lib.ncu.edu.tw:8080/~refitoy/e-learning/">圖書館資源學習網</a></td>
+				<td><a target="_blank" href="http://ncufresh.ncu.edu.tw/ncufresh11/module/readme/document_fordownload/download/100%E5%AD%B8%E5%B9%B4%E5%BA%A6%E6%A0%A1%E6%9B%86.pdf">100學年度校曆</a></td>
+			</tr>
+			</table>
+		</div>
+		<div id="favo">
+			<table>
+				<tr>
+					<td><a target="_blank" href="http://www.uac.edu.tw/">線上查榜系統</a></td>
+					<td><a target="_blank" href="http://www4.is.ncu.edu.tw/register/check/stdno_check.php">學號查詢</a></td>
+				</tr>
+				<tr>
+					<td><a target="_blank" href="http://www.facebook.com/pinewave">松濤電台</a></td>
+					<td><a target="_blank" href="http://ncugrad.pixnet.net/blog">研究生部落</a></td>
+				</tr>
+				<tr>
+					<td><a target="_blank" href="http://ncufresh.ncu.edu.tw/ncufresh11/module/readme/content.php?cid=3&Cid=6">校園安全</a></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,1024 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*picture*/
+/*backg*/
+#background_category
+{
+
+background-image:url('readme/readme/category/background_03.png');
+
+}
+
+#background_menu1
+{
+
+background-image: url('readme/readme/menu/new__background_03.png');
+
+margin-top:20px;
+
+}
+
+#background_menu2
+{
+
+background-image:url('readme/readme/menu/back__background_03.png');
+margin-top:20px;
+}
+
+#background_menu3
+{
+
+background-image:url('readme/readme/menu/must-know__background_03.png');
+margin-top:20px;
+}
+
+#background_menu4
+{
+
+background-image:url('readme/readme/menu/download__background_03.png');
+margin-top:20px;
+}
+
+#background_menu5
+{
+
+background-image:url('readme/readme/menu/new__background_03.png');
+margin-top:20px;
+}
+
+
+
+#background_content0
+{
+margin-left:400px;
+background-image:url('readme/readme/content/to-do-pic_03.png');
+
+}
+
+#background_content1
+{
+margin-left:400px;
+background-image:url('readme/readme/content/new-pic_03.png');
+
+}
+
+#background_content2
+{
+margin-left:400px;
+background-image:url('readme/readme/content/back-pic_03.png');
+
+}
+
+
+
+#background_content3
+{
+margin-left:400px;
+background-image:url('readme/readme/content/must-know-pic_03.png');
+}
+
+#background_content4
+{
+margin-left:400px;
+background-image:url('readme/readme/content/download_background_1.png');
+
+}
+
+#background_test
+{
+
+background-image:url('images/circle_02.png');
+
+}
+/*object*/
+/*cat*/
+#book1
+{
+
+background-image:url('readme/readme/category/button1.png');
+margin-left: 30px;
+margin-top: 395px;
+}
+
+#book2
+{
+
+background-image:url('readme/readme/category/button2.png');
+margin-left: 150px;
+margin-top: 395px;
+}
+
+#book3
+{
+
+background-image:url('readme/readme/category/button3.png');
+margin-left: 270px;
+margin-top: 395px;
+}
+#book4
+{
+
+background-image:url('readme/readme/category/button4.png');
+margin-left: 390px;
+margin-top: 395px;
+}
+#book5
+{
+
+background-image:url('readme/readme/category/button5.png');
+margin-left: 510px;
+margin-top: 395px;
+}
+
+#cutegirl
+{
+
+background-image:url('readme/readme/category/move_girl1.png');
+margin-left: 270px;
+margin-top: 152px;
+}
+
+/*cate-nd*/
+/*menu*/
+#menu_back
+{
+
+background-image:url('readme/readme/menu/button.png');
+margin-left: 560px;
+margin-top: 80px;
+}
+#menu_back:hover
+{
+background-image:url('readme/readme/menu/button_mousethrough.png');
+}
+
+
+
+#menu_content
+{
+
+margin-left: 80px;
+margin-top: 80px;
+}
+
+#leftmenu_content
+{
+margin-left: 60px;
+margin-top: 80px;
+
+}
+
+#rightmenu_content
+{
+margin-left: 310px;
+margin-top: 80px;
+
+}
+/*menu-end*/
+/*content*/
+
+#index0_pos
+{
+
+background-image:url('readme/readme/content/button01.png');
+margin-left: 555px;
+margin-top: 10px;
+}
+
+#index0_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through01.png');
+margin-left:540px;
+}
+
+#index0_active_pos
+{
+
+background-image:url('readme/readme/content/button01.png');
+margin-left: 540px;
+margin-top: 10px;
+}
+
+#index0_active_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through01.png');
+}
+
+#index1_pos
+{
+
+background:url('readme/readme/content/button02.png') no-repeat;
+margin-left: 555px;
+margin-top: 78px;
+}
+
+#index1_pos:hover
+{
+
+background:url('readme/readme/content/mouse-through02.png') no-repeat;
+margin-left: 540px;
+margin-top: 78px;
+}
+
+#index1_active_pos
+{
+	background:url('readme/readme/content/button02.png');
+	margin-left: 570px;
+	margin-top: 78px;
+	/*width:129px;
+	height:60px;*/
+}
+
+#index1_active_pos:hover
+{
+	background:url('readme/readme/content/mouse-through02.png');
+	margin-left: 548px;
+	margin-top: 78px;
+	/*width:129px;
+	height:60px;*/
+}
+#index2_pos
+{
+
+background-image:url('readme/readme/content/button03.png');
+margin-left: 555px;
+margin-top: 146px;
+}
+
+#index2_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through03.png');
+	margin-left: 540px;
+}
+
+#index2_active_pos
+{
+
+background-image:url('readme/readme/content/button03.png');
+margin-left: 570px;
+margin-top: 146px;
+}
+
+#index2_active_pos:hover
+{
+	margin-left: 548px;
+background-image:url('readme/readme/content/mouse-through03.png');
+
+}
+
+#index3_pos
+{
+
+background-image:url('readme/readme/content/button04.png');
+margin-left: 555px;
+margin-top: 220px;
+}
+
+#index3_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through04.png');
+	margin-left: 540px;
+}
+
+#index3_active_pos
+{
+
+background-image:url('readme/readme/content/button04.png');
+margin-left: 570px;
+margin-top: 220px;
+}
+
+#index3_active_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through04.png');
+margin-left: 550px;
+}
+
+
+#index4_pos
+{
+
+background-image:url('readme/readme/content/button05.png');
+margin-left: 555px;
+margin-top: 290px;
+}
+
+#index4_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through05.png');
+margin-left: 540px;
+}
+
+#index4_active_pos
+{
+
+background-image:url('readme/readme/content/button05.png');
+margin-left: 570px;
+margin-top: 290px;
+}
+
+#index4_active_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through05.png');
+margin-left: 540px;
+}
+
+#index5_0_pos
+{
+
+background-image:url('readme/readme/content/buttonback05.png');
+margin-left: 548px;
+margin-top: 310px;
+}
+/*¨S¦³¿ù³á*/
+#index5_0_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through1.png');
+	margin-left: 540px;
+}
+
+#index5_1_pos
+{
+
+background-image:url('readme/readme/content/buttonback01.png');
+margin-left: 548px;
+margin-top: 55px;
+}
+
+#index5_1_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through07.png');
+	margin-left: 540px;
+}
+
+#index5_2_pos
+{
+
+background-image:url('readme/readme/content/buttonback02.png');
+margin-left: 548px;
+margin-top: 118px;
+}
+
+#index5_2_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through08.png');
+	margin-left: 540px;
+}
+
+#index5_3_pos
+{
+
+background-image:url('readme/readme/content/buttonback03.png');
+margin-left: 548px;
+margin-top: 177px;
+}
+
+#index5_3_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through09.png');
+
+}
+
+#index5_4_pos
+{
+
+background-image:url('readme/readme/content/buttonback04.png');
+margin-left: 548px;
+margin-top: 245px;
+}
+
+#index5_4_pos:hover
+{
+background-image:url('readme/readme/content/mouse-through010.png');
+
+}
+
+#content_content_pos
+{
+margin-left: 50px;
+margin-top: 0px;
+}
+
+#background_middle_pos
+{
+background-image:url('readme/readme/content/all_background_middle.png');
+}
+
+#background_up_pos
+{
+background-image:url('readme/readme/content/rd_bg_top.png');
+}
+
+#bg_bottom_pos
+{
+background-image:url('readme/readme/content/all_background_bottom.png');
+}
+
+#title_pos
+{
+margin-left:40px;
+margin-top:30px;
+
+}
+
+
+
+#table_up
+{
+margin-left: 50px;
+margin-top: 55px;
+
+}
+#table_in
+{
+margin-left: 50px;
+margin-top: 100px;
+
+}
+/*content-end*/
+
+
+/********/
+
+
+/*type*/
+
+
+/*back*/
+
+.Title
+{
+width:AUTO;
+height:30px;
+display: inline-block;
+float: left;
+font-size:24px;
+position: absolute;
+}
+
+
+.background
+{
+float: left;
+/*height: 628px;*/
+min-height: 586px;
+position: relative;
+width: 625px;
+z-index: 2000;
+
+}
+.background_formenu
+{
+float: left;
+/*height: 628px;*/
+height: 586px;
+width: 625px;
+z-index: 2000;
+
+}
+
+.content_content
+{
+display: block;
+float: left;
+
+width: 500px;
+/*height:auto;*/
+
+min-height: 360px;
+font-size: medium;
+line-height: 30px;
+color:#59381d;
+font-weight: bold;
+Font-Family: "Microsoft JhengHei",Arial;
+/*TEXT-ALIGN: center;*/
+text-decoration: bold;
+z-index: 1005;
+
+}
+
+.background_middle
+{
+display: inline-block;
+float: left;
+
+width: 625px;
+/*height:inherit;*/
+min-height: 210px;
+z-index: 1005;
+
+
+
+}
+
+.background_up
+{
+display: inline-block;
+float: left;
+position: relative;
+width: 625px;
+/*height:inherit;*/
+height: 70px;
+z-index: 1005;
+
+
+
+}
+.BG_bottom_c
+{
+display: inline-block;
+position: relative;
+float: left;
+width: 625px;
+height: 238px;
+z-index: 1005;
+
+}
+
+
+
+.background_bottomimg1
+{
+display: inline-block;
+float: left;
+position: relative;
+width: 186px;
+/*height:inherit;*/
+height: 185px;
+z-index: 1005;
+
+}
+
+.background_bottomimg2
+{
+display: inline-block;
+float: left;
+position: relative;
+width: 212px;
+/*height:inherit;*/
+height: 215px;
+z-index: 1005;
+
+}
+
+.background_bottomimg3
+{
+display: inline-block;
+float: left;
+position: relative;
+width: 212px;
+/*height:inherit;*/
+height: 215px;
+z-index: 1005;
+
+}
+
+.background_bottomimg4
+{
+display: inline-block;
+float: left;
+position: relative;
+width: 212px;
+/*height:inherit;*/
+height: 215px;
+z-index: 1005;
+
+}
+
+.background_bottomimg5
+{
+display: inline-block;
+float: left;
+position: relative;
+width: 630px;
+/*height:inherit;*/
+height: 70px;
+z-index: 1005;
+
+}
+
+.backgroundsetting
+{
+display: inline-block;
+float: left;
+height: 586px;
+position: relative;
+width: 635px;
+z-index: 1;
+
+}
+
+.backgroundsetting_category
+{
+display: inline-block;
+float: left;
+height: 586px;
+position: relative;
+width: 635px;
+z-index: 1;
+
+}
+/*object*/
+/*category*/
+.book
+{
+display: inline-block;
+
+height: 161px;
+position: absolute;
+width: 107px;
+
+}
+
+.girl
+{
+display: inline-block;
+
+height: 255px;
+position: absolute;
+width: 159px;
+
+}
+/*category-end*/
+/*menu*/
+
+.menu_back_c
+{
+display: inline-block;
+float: left;
+height: 121px;
+position: absolute;
+width: 41px;
+
+}
+
+.menu_back_c:hover
+{
+display: inline-block;
+float: left;
+height: 121px;
+position: absolute;
+width: 54px;
+
+}
+
+.innermenu_content
+{
+float: left;
+height: 500px;
+position: absolute;
+width: 250px;
+word-break:break-all;
+word-wrap:break-word;
+font-size: 16px;
+line-height: 22px;
+color:#59381d;
+Font-Family: Microsoft JhengHei;
+font-weight: bold;
+z-index: 2;
+/*menu-end*/
+/*content*/
+}
+
+.menu_content
+{
+float: left;
+height: 400px;
+position: absolute;
+width: 400px;
+
+font-size: 24px;
+line-height: 14px;
+color:#59381d;
+Font-Family: Microsoft JhengHei;
+font-weight: bold;
+z-index: 2;
+/*menu-end*/
+/*content*/
+}
+.index0
+{
+display: block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index0:hover
+{
+display:block;
+float: left;
+height: 54px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+.index1
+{
+display: block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index1:hover
+{
+display: block;
+float: left;
+height: 55px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+
+.index2
+{
+display:block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index2:hover
+{
+display: block;
+float: left;
+height: 56px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+.index3
+{
+display:block;
+float: left;
+height: 43px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index3:hover
+{
+display: block;
+float: left;
+height: 57px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+
+.index4
+{
+display: block;
+float: left;
+height: 41px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index4:hover
+{
+display:block;
+float: left;
+height: 56px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+.index5_0
+{
+display: block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+
+.index5_0:hover
+{
+display: block;
+float: left;
+height: 54px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+
+.index5_1
+{
+display: inline-block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+
+.index5_1:hover
+{
+display: inline-block;
+float: left;
+height: 55px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+.index5_2
+{
+display: inline-block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index5_2:hover
+{
+display: inline-block;
+float: left;
+height: 56px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+
+.index5_3
+{
+display: inline-block;
+float: left;
+height: 43px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index5_3:hover
+{
+display: inline-block;
+float: left;
+height: 57px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+.index5_4
+{
+display: inline-block;
+float: left;
+height: 41px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index5_4:hover
+{
+display: inline-block;
+float: left;
+height: 56px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+.index5_5
+{
+display: inline-block;
+float: left;
+height: 40px;
+position: absolute;
+width: 91px;
+z-index:2111;
+}
+
+.index5_5:hover
+{
+display: inline-block;
+float: left;
+height: 56px;
+position: absolute;
+width: 129px;
+z-index:2111;
+}
+
+.table_up
+{
+display: inline-block;
+float: left;
+height: 50px;
+position: absolute;
+width: 550px;
+
+font-size: 20px;
+line-height: 14px;
+color:#59381d;
+Font-Family: Microsoft JhengHei,Arial;/*TEXT-ALIGN: left;*/
+text-decoration: blink;
+font-weight: bold;
+z-index: 2;
+}
+
+.table_in
+{
+display: inline-block;
+float: left;
+height: 450px;
+position: absolute;
+width: 520px;
+color:#59381d;
+font-size: 20px;
+line-height: 24px;
+Font-Family: Microsoft JhengHei,Arial;
+text-decoration: blink;
+font-weight: bold;
+z-index: 2;
+overflow-y: auto;
+word-break: break-all;
+}
+
+table , table td,table tr{
+    border: 1px solid #000;
+}
+
+
+
+
+
+
+
+
+.new_module_main
+{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 16px;
+	line-height: 24px;
+	color:#333333;
+}
+
+.text
+{
+font-size: 22px;
+line-height: 16px;
+Font-Family: verdana;TEXT-ALIGN: center;
+
+}
+
+.table_var
+{
+	border-top: #4F81BD 1px solid;
+	border-bottom: #4F81BD 1px solid;
+	background-color: #D3DFEE;
+	
+	padding: 4px;
+	width: 600px;
+	
+	color: #365F91;
+	font-style: italic;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.table_value
+{
+	padding: 4px;
+	width: 600px;
+	font-size: 14px;
+	border-bottom: #4F81BD 1px solid;
+	
+	color: #365F91;
+
+}
+
+.
+{
+	padding: 4px;
+	width: 600px;
+	font-size: 14px;
+	border-bottom: #4F81BD 1px solid;
+	
+	color: #365F91;
+
+}
+
+

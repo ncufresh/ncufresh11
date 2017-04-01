@@ -1,0 +1,12 @@
+<div class="interation_main">
+	<div class="interation_title">
+		<a class="close" href="#"></a>
+	</div>
+	<div class="interation_content">
+	<ul>
+		<{foreach from=$interation key=k item=val}>
+			<li><a class="interate" href="map.php?action=interate&pid=<{$pid}>&type=<{$type}>&option=<{$k}>"><{$val.name}></a></li>
+		<{/foreach}>
+	<ul>
+	</div>
+</div>

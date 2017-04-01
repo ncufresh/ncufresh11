@@ -1,0 +1,89 @@
+@charset 'utf-8';
+a.dialog,
+span.likes,
+a.like,
+div.moveup,
+div.movedown,
+a.edit,
+a.delete,
+a.push,
+div.commits > form {
+    display: none;
+}
+
+#main .forum {
+    right: 20px;
+    position: relative;
+}
+
+#contents {
+    background-position: 0 bottom;
+    position: relative;
+}
+
+#topic,
+.response {
+    margin-right: -20px;
+}
+
+#topic .buttons .likes,
+.response .buttons .likes {
+    margin-left: 50px;
+}
+
+#topic .buttons .like,
+.response .buttons .like {
+    position: relative;
+    right: 60px;
+}
+
+#topic .footer {
+    position: relative;
+}
+
+#topic .commits a {
+    position: relative;
+    top: -25px;
+}
+
+#topic .commit p,
+.response .commits p {
+    position: absolute;
+}
+
+#topic .commit .end,
+#topic .commits form .end {
+    position: relative;
+    top: -25px;
+}
+
+#topic .text,
+.response .text {
+    left: 30px;
+    margin: 0;
+    position: relative;
+    top: -180px;
+}
+
+.response .commit .end,
+.response .commits form .end {
+    left: 45px;
+    position: relative;
+    top: 35px;
+}
+
+.response .commits a {
+    left: 35px;
+    position: relative;
+    top: 35px;
+}
+
+#topic .commits,
+.response .commits {
+    height: 215px;
+    position: relative;
+}
+
+.response .footer {
+    position: relative;
+}

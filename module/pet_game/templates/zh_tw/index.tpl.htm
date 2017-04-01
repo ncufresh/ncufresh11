@@ -1,0 +1,63 @@
+<div class="pet_game_main">
+	<div class="pet_game_actions">
+		<{foreach from=$actions key=type item=value}>
+			<div id="<{$type}>" class="action">
+				<div class="action_name">
+				</div>
+				<div class="action_content">
+					<ul class="action_content_main">
+						<{foreach from=$value key=k item=v}>
+							<li><a class="go_map" href="map.php?action=info&type=<{$type}>&id=<{$k}>"><{$v.name}></a></li>
+						<{/foreach}>
+					</ul>
+					<div class="action_content_bottom">
+					</div>
+				</div>
+			</div>
+		<{/foreach}>
+	</div>
+	<div class="pet_game_pic">
+		<span class="pet_name"><{$pet_name}></span>
+		<img class="pet_pic" src="<{$img_src}>"/>
+		<div class="exit"><a href="../personal/index.php"></a></div>
+	</div>
+	<div class="pet_game_status">
+		<a class="help_button" href="help.php">
+		</a>
+		<div class="life_stick_background">
+			<div class="life_stick_foreground" style="width:<{$pet_life}>%;">
+			</div>
+			<span class="life_value">
+				<{$pet_life}>
+			</span>
+		</div>
+		<a class="log_button" href="interation.php">日記(<{$num_interations}>)</a>
+		<a class="friend_button" href="friend.php">好友(<{$num_friends}>)</a>
+		<div class="state">
+			<{foreach from=$pet_state key=k item=value}>
+				<{$value}>
+			<{/foreach}>
+		</div>
+	</div>
+</div>
+<div class="pet_game_help">
+</div>
+<div class="pet_game_map">
+</div>
+<div class="pet_game_log">
+</div>
+<div class="pet_game_friend">
+</div>
+<div class="pet_small_window">
+	<div class="small_window_main">
+		<div class="small_window_title">
+			<a class="close" href="#"></a>
+		</div>
+		<div class="small_window_content">
+			<div class="new_friend">
+			<p>有人邀請你成為他的好友！到他個人專區點擊加為好友你們就成為朋友囉！</p>
+			<ul><{foreach from=$new_friends item=new_friend}><li><a href="../personal/index.php?info_id=<{$new_friend.friendid}>"><{$new_friend.name}></a></li><{/foreach}></ul>
+			</div>
+		</div>
+	</div>
+</div>

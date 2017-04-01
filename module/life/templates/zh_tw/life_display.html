@@ -1,0 +1,81 @@
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js" type="text/javascript"></script>
+			<script type="text/javascript">
+			
+			$(document).ready(function() {
+			
+		   
+				var show = $('#show_content');
+				    var need_reload = false;
+					var ifload = false;
+				$('.show_toyou').click(function() {
+			
+					var $url = $(this).attr('href');
+					if ( need_reload ){
+					   
+						show.dialog("destroy");
+						$('.ui-dialog-titlebar').hide();
+						need_reload = false;
+					
+					}
+					//var $url = $(this).attr('href');
+				
+			
+					show.dialog({
+						create: function() {
+					
+							$(this).load($url);
+						},
+						modal: false,
+                        show: 'fade',
+						hide: 'fade',
+						draggable: false,
+						resizable: false,
+						position:[$('#main').offset().left - $('body').scrollLeft()+65, $('#main').offset().top - $('body').scrollTop()+25],
+						height: 620,
+						width: 626
+						
+					})
+					$('.ui-dialog-titlebar').hide();
+			
+					
+					need_reload = true;
+					ifload=true;
+					
+					return false;
+				});
+			});
+			</script>
+
+
+
+<div id="thispage">
+
+		<div id="background<{$img}>" class="backgroundsetting_lifemenu">
+				
+				  
+				
+					<div id="middle<{$img}>" class="middle">
+							<br/>
+								<{section name=foo loop=$array_2D}>
+										<a id="img<{$img}>_<{$smarty.section.foo.index}>"class="show_toyou" href="life_content.php?c1id=<{$array_2D[foo].category_id}>&scid=<{$smarty.section.foo.index}>&c2id=0">
+						
+										</a><br/><br/>
+								<{/section}>
+					</div>
+				
+
+			<a href="life_display.php?c1id=1"id="food" class="imgfood"></a>
+			<a href="life_display.php?c1id=5"id="life" class="imglife"></a>
+			<a href="life_display.php?c1id=2"id="live" class="imglive"></a>
+			<a href="life_display.php?c1id=4"id="health" class="imghealth"></a>
+			<a href="life_display.php?c1id=3"id="transport" class="imgtransport"></a>
+			<a href="life_display.php?c1id=7"id="outdoor" class="imgoutdoor"></a>
+			<a href="life_display.php?c1id=6"id="sport" class="imgsport"></a>
+        <div id="show_content"></div>
+
+		</div>
+
+
+
+</div>

@@ -1,0 +1,32 @@
+@charset 'utf-8';
+a.dialog,
+span.likes,
+a.like,
+div.moveup,
+div.movedown,
+a.edit,
+a.delete,
+a.push,
+div.commits > form {
+    display: none;
+}
+
+#main .forum {
+    right: 20px;
+    position: relative;
+}
+
+#contents {
+    background-position: 0 bottom;
+    position: relative;
+}
+
+#threads th,
+#threads tfoot td,
+#threads th.left,
+#threads tfoot td.left,
+#threads th.right,
+#threads tfoot td.right {
+    background-color: #5795E1;
+    background-image: none;
+}

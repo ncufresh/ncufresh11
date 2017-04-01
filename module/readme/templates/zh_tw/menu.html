@@ -1,0 +1,74 @@
+
+<div id="background_menu<{$img}>" class="background">
+   
+	<{if $img!=4 }>
+	                           <div id="leftmenu_content" class="innermenu_content">
+      
+							   <{section name=foo loop=$array_2D max=$i+1}>
+							  
+							   <a  href="content.php?cid=<{$array_2D[foo].category_id}>&Cid=<{$smarty.section.foo.index}>"><{$array_2D[foo].name}></a>
+							   <br/><br/>
+							   <{/section}>
+							   
+							   </div>
+							   
+							   
+							   <div id="rightmenu_content" class="innermenu_content">
+                           
+							   <{section name=foo loop=$array_2D start=$i+1}>
+							               
+										   <{if $smarty.section.foo.index<10 }>
+												   
+															<a  href="content.php?cid=<{$array_2D[foo].category_id}>&Cid=<{$smarty.section.foo.index}>"><{$array_2D[foo].name}></a>
+															<br /><br />
+												   
+										   <{else}>
+										   
+										            <{if $img==3 }>
+														   <a  href="<{$array_2D[foo].content}>"><{$array_2D[foo].name}></a>
+														   <br/><br/>
+										            <{else}>
+													        <{if $img==4}>
+																			    <a  href="<{$array_2D[foo].content}>"><{$array_2D[foo].name}></a>
+																				<br/><br/>
+															        <{else}>					
+																				<a  href="content.php?cid=<{$array_2D[foo].category_id}>&Cid=<{$smarty.section.foo.index}>"><{$array_2D[foo].name}></a>
+																				<br /><br />
+															<{/if}>
+													<{/if}>
+										   <{/if}>
+										   
+							   <{/section}>
+							               
+							   </div>
+			
+	<{else}>			
+	
+                                <div id="leftmenu_content" class="innermenu_content">
+      
+							   <{section name=foo loop=$array_2D max=$i+1}>
+							  
+							    <a  href="<{$array_2D[foo].content}>"><{$array_2D[foo].name}></a>
+							   <br/><br/>
+							   <{/section}>
+							   
+							   </div>
+							   
+							   
+							   <div id="rightmenu_content" class="innermenu_content">
+      
+							   <{section name=foo loop=$array_2D start=$i+1}>
+							  
+							   <a  href="<{$array_2D[foo].content}>"><{$array_2D[foo].name}></a>
+							   <br /><br />
+							   <{/section}>
+							   
+							   </div>
+			
+			               
+			
+			
+    <{/if}>
+	 <a id="menu_back"class="menu_back_c"href="index.php"></a>
+</div>
+

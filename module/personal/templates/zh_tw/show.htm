@@ -1,0 +1,34 @@
+<!--
+<div class="new_module_main">
+	<h1><{$mail.title}></h1>
+
+	date : <{$mail.date}>
+	<p>
+		<form method="post" action="index.php">
+			<input type="hidden" value="<{$mail.sender}>" name="reciever" /> <br />
+			<input type="hidden" value="Re:<{$mail.title}>" name="title" />
+		</form>
+	</p>
+</div>
+-->
+<div class="show_mail_main">
+	<table class="content">
+		<tbody>
+			<tr><td class="tag">寄件人</td><td><{$mail.username}></td></tr>
+			<tr><td class="tag">標題</td><td><{$mail.title}></td></tr>
+			<tr><td class="tag">內容</td></tr>
+			<tr><td colspan="2"><div class="text"><{$mail.content}></div></td></tr>
+		</tbody>
+	</table>
+	<a class="re_mail" href="newmail.php?title=<{$mail.title}>&rid=<{$mail.username}>">
+		回信給作者
+	</a>
+	<a class="back" href="mail.php">
+		回到上一層
+	</a>
+	<!--
+	<a href="mail.php">信件列表</a>
+	<a href="newmail.php">撰寫新信</a>
+	-->
+</div>
+<{include file="./zh_tw/mailbox.tpl.html"}>

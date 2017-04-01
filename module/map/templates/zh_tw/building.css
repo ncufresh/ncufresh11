@@ -1,0 +1,107 @@
+div#map_module_main {
+	background-image: url("images/map_bg.png");
+	margin: 0 auto;
+	width: 650px;
+	height: 600px;
+}
+
+a {
+	cursor:pointer;
+}
+
+a.show {
+	display: inline-block;
+	position: absolute;
+	float: left;
+}
+a.show:hover {
+	z-index:99 !important;
+}
+a#b01 {
+	width: 145px;
+	height: 92px;
+	background-image: url("images/building/b01.png");
+	margin:307px 0 0 349px;
+	z-index:4;
+}
+a#b01:hover {
+	background-image: url("images/building/b01h.png");
+}
+a#b02 {
+	width: 97px;
+	height: 80px;
+	background-image: url("images/building/b02.png");
+	margin:150px 0 0 434px;
+	z-index:6;
+}
+a#b02:hover {
+	background-image: url("images/building/b02h.png");
+}
+a#b03 {
+	width: 130px;
+	height: 85px;
+	background-image: url("images/building/b03.png");
+	margin:384px 0 0 337px;
+}
+a#b03:hover {
+	background-image: url("images/building/b03h.png");
+}
+a#b04 {
+	width: 90px;
+	height: 99px;
+	background-image: url("images/building/b04.png");
+	margin:180px 0 0 488px;
+	z-index:7;
+}
+a#b04:hover {
+	background-image: url("images/building/b04h.png");
+}
+a#b06 {
+	width: 142px;
+	height: 108px;
+	background-image: url("images/building/b06.png");
+	margin:156px 0 0 207px;
+	z-index:1;
+}
+a#b06:hover {
+	background-image: url("images/building/b06h.png");
+}
+a#b07 {
+	width: 93px;
+	height: 76px;
+	background-image: url("images/building/b07.png");
+	margin:108px 0 0 385px;
+	z-index:5;
+}
+a#b07:hover {
+	background-image: url("images/building/b07h.png");
+}
+a#b09 {
+	width: 214px;
+	height: 98px;
+	background-image: url("images/building/b09.png");
+	margin:432px 0 0 222px;
+}
+a#b09:hover {
+	background-image: url("images/building/b09h.png");
+}
+a#b10 {
+	width: 117px;
+	height: 121px;
+	background-image: url("images/building/b10.png");
+	margin:230px 0 0 319px;
+	z-index:3;
+}
+a#b10:hover {
+	background-image: url("images/building/b10h.png");
+}
+a#b11 {
+	width: 127px;
+	height: 91px;
+	background-image: url("images/building/b11.png");
+	margin:211px 0 0 259px;
+	z-index:2;
+}
+a#b11:hover {
+	background-image: url("images/building/b11h.png");
+}

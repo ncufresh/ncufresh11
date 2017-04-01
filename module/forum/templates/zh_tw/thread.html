@@ -1,0 +1,139 @@
+<div class="forum">
+<!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://ncufresh.snowtec.org/module/forum/templates/zh_tw/thread_ie6.css" />
+<![endif]-->
+    <div id="contents">
+        <span id="nickname"><{$nickname}></span>
+        <span id="style"><{$style}></span>
+        <div id="breadcrumbs"><{$breadcrumbs}></div>
+
+        <a class="reply dialog" href="post.php?action=reply&fid=<{$fid}>&tid=<{$tid}>" rel="reply">回覆文章</a>
+
+        <{include file='zh_tw/pagination.html' pagination=$pagination}>
+
+        <{if $thread}>
+        <div id="topic">
+            <div class="profile">
+                <div class="header"></div>
+                <div class="data">
+                    <a href="../personal?info_id=<{$thread.author_id}>">
+                        <img src="<{$thread.icon}>" alt="<{$thread.nickname}>" />
+                    </a>
+                    <dl>
+                        <dt>暱稱：</dt>
+                        <dd><{$thread.nickname}></dd>
+                        <dt>帳號：</dt>
+                        <dd><{$thread.username}></dd>
+                        <dt>系所：</dt>
+                        <dd><{$thread.department}></dd>
+                        <dd class="contact"><a href="../personal?info_id=<{$thread.author_id}>">拜訪我！</a></dd>
+                    </dl>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <div class="content">
+                <h4 class="title"><{if $admin}><a href="post.php?action=sticky&fid=<{$thread.forum_id}>&tid=<{$thread.id}>"><{if $thread.sticky}>降<{else}>頂<{/if}></a><{/if}><{$thread.title}></h4>
+                <div class="header"></div>
+                <div class="content">
+                    <div class="text">
+                        <{$thread.content}>
+                    </div>
+                </div>
+                <p class="time">最後編輯時間：<{$thread.time}><{if $thread.update_times > 0}>，修改了<{$thread.update_times}>次<{/if}>。</p>
+                <div class="buttons">
+                    <span class="likes">&nbsp;X&nbsp;<span><{$thread.like}></span></span>
+                    <a class="like" href="post.php?action=like&tid=<{$thread.id}>">喜歡</a>
+                    <{if $uid == $thread.author_id || $admin}>
+                    <a class="edit dialog" href="post.php?action=edit&eid=<{$thread.id}>" rel="edit">編輯</a>
+                    <a class="delete" href="post.php?action=delete&did=<{$thread.id}>">刪除</a>
+                    <{/if}>            
+                </div>
+                <div class="commits">
+                    <div class="moveup"></div>
+                    <{foreach item=commit from=$thread.commits}>
+                    <div class="commit">
+                        <{if $admin}>
+                        <a class="delete" href="post.php?action=deletecommit&did=<{$commit.id}>">砍</a>
+                        <{/if}>
+                        <div class="end"></div>
+                        <p><{$commit.nickname}>: <{$commit.content}></p>
+                    </div>
+                    <{/foreach}>
+                    <div class="movedown"></div>
+                    <form id="commitform-<{$thread.id}>">
+                        <div class="end"></div>
+                        <input name="content" type="text" />
+                        <a class="push" href="post.php?action=commit&tid=<{$thread.id}>" rel="commitform-<{$thread.id}>">推文</a>
+                    </form>
+                </div>
+                <div class="footer"></div>
+            </div>
+        </div>
+        <{/if}>
+
+        <{foreach item=reply from=$replies}>
+        <div class="response">
+            <div class="profile">
+                <div class="header"></div>
+                <div class="data">
+                    <a href="../personal?info_id=<{$reply.author_id}>">
+                        <img src="<{$reply.icon}>" alt="<{$reply.nickname}>" />
+                    </a>
+                    <dl>
+                        <dt>暱稱：</dt>
+                        <dd><{$reply.nickname}></dd>
+                        <dt>帳號：</dt>
+                        <dd><{$reply.username}></dd>
+                        <dt>系所：</dt>
+                        <dd><{$reply.department}></dd>
+                        <dd class="contact"><a href="../personal?info_id=<{$reply.author_id}>">拜訪我！</a></dd>
+                    </dl>
+                </div>
+                <div class="footer"></div>
+            </div>
+            <div class="content">
+                <div class="header">
+                    <div class="number">#<{$reply.number}></div>
+                </div>
+                <div class="content">
+                    <div class="text">
+                        <{$reply.content}>
+                    </div>
+                </div>
+                <p class="time">最後編輯時間：<{$reply.time}><{if $reply.update_times > 0}>，修改了<{$reply.update_times}>次<{/if}>。</p>
+                <div class="buttons">
+                    <span class="likes">&nbsp;X&nbsp;<span><{$reply.like}></span></span>
+                    <a class="like" href="post.php?action=like&tid=<{$reply.id}>">喜歡</a>
+                    <{if $uid == $reply.author_id || $admin}>
+                    <a class="edit dialog" href="post.php?action=replyedit&eid=<{$reply.id}>" rel="edit">編輯</a>
+                    <a class="delete" href="post.php?action=delete&did=<{$reply.id}>">刪除</a>
+                    <{/if}>
+                </div>
+                <div class="commits">
+                    <div class="moveup"></div>
+                    <{foreach item=commit from=$reply.commits}>
+                    <div class="commit">
+                        <{if $admin}>
+                        <a class="delete" href="post.php?action=deletecommit&did=<{$commit.id}>">砍</a>
+                        <{/if}>
+                        <div class="end"></div>
+                        <p><{$commit.nickname}>: <{$commit.content}></p>
+                    </div>
+                    <{/foreach}>
+                    <div class="movedown"></div>
+                    <form id="commitform-<{$reply.id}>">
+                        <div class="end"></div>
+                        <input name="content" type="text" />
+                        <a class="push" href="post.php?action=commit&tid=<{$reply.id}>" rel="commitform-<{$reply.id}>">推文</a>
+                    </form>
+                </div>
+                <div class="footer"></div>
+            </div>
+        </div>
+        <{/foreach}>
+
+        <div style="clear:both;margin-top:30px;">
+            <{include file='zh_tw/pagination.html' pagination=$pagination}>
+        </div>
+    </div>
+</div>

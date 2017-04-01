@@ -1,0 +1,23 @@
+<div class="new_module_main">
+<h2>Hello ArmoredCore! 這是一個測試模組 :)</h2>
+<ol>
+  <li>在建立新模組時，完整複製此資料夾到新模組資料夾下，可建立基本的檔案結構。</li>
+  <li>在templates/<{$currcfg.DEFAULT_LANG}>資料夾底下的style.css預設會被載入，不需額外呼叫</li>
+  <li>如果你需要引入其他的CSS樣式檔，可以用下面的方式呼叫：<br /><code>$currtpl -> add_css("x.css");</code></li>
+  <li>如果你需要引入其他的JavaScript檔，可以用下面的方式呼叫：<br /><code>$currtpl -> add_js("y.js");</code></li>
+  <li>下面是一個資料庫的呼叫和使用範例：<br />
+    <div class="table_var">ac_module資料表</div>
+    
+    <{section name=i loop=$array_2D}>
+       <div class="table_value"> <{$array_2D[i].module_name}> - <{$array_2D[i].module_desc}> </div>
+    <{/section}>
+  </li>
+  
+  <li>下面是一個權限判斷範例：
+    <ol type="a">
+      <li>如果你是管理員，你會看到O</li>
+      <li>如果你是一般使用者，你會看到X。</li>
+    </ol>
+    你現在看到的是：<strong><{$is_admin}></strong></li>
+</ol>
+</div>

@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* -- Global Tags -- */
+body
+{
+	font-size: 16px;
+	font-family: Arial, "新細明體";
+	margin: 0px;
+}
+
+a{			color: #333333;	text-decoration: none;}
+a:hover{	color: #3399FF;	text-decoration: underline;}
+
+input,textarea
+{
+	font-size: 16px;
+	color: #666666;
+	border: #CCCCCC solid 1px;
+}
+
+img
+{
+	border: 0px;
+}
+
+code
+{
+	text-decoration: underline;
+	font-family: "Consolas";
+	font-size: small;
+}
+
+.clear{	display: block;	clear: both;}
+.dec_hr{color: #FFFFFF; border: 0px; border-top: 1px #999999 dashed;}
+.warning_msg{color: #FF0000;	text-decoration: underline;}
+
+/* -- NCUFresh 2010 menu botton -- */
+
+.btt{	width: 85px; height: 40px; display: block;}
+
+#btt1{		background:url(images/btt1.png);}
+#btt1:hover{background:url(images/bt1.png);}
+
+#btt2{		background:url(images/btt2.png);}
+#btt2:hover{background:url(images/bt2.png);}
+
+#btt3{		background:url(images/btt3.png);}
+#btt3:hover{background:url(images/bt3.png);}
+
+#btt4{		background:url(images/btt4.png);}
+#btt4:hover{background:url(images/bt4.png);}
+
+#btt5{		background:url(images/btt5.png);}
+#btt5:hover{background:url(images/bt5.png);}
+
+#btt6{		background:url(images/btt6.png);}
+#btt6:hover{background:url(images/bt6.png);}
+
+#btt7{		background:url(images/btt7.png);}
+#btt7:hover{background:url(images/bt7.png);}
+
+#btt8{		background:url(images/btt8.png);}
+#btt8:hover{background:url(images/bt8.png);}
+
+/* -- NCUFresh 2010 mainframe container -- */
+
+#main_top{			height: 212px;	background: url(images/sky.png) repeat-x;}
+#main_top_banner{	width: 1024px;	height: 212px;	background: url(images/banner.png);	margin: auto;}
+
+#main_top_status{	width: 1024px;	height: 16px;	position: absolute; margin-left: 0px;	margin-top: 0px;	padding-left: 48px;	padding-top: 4px;	font-size: 12px;}
+#main_top_login{	width: 220px;	height: 40px;	position: absolute;	margin-left: 710px;	margin-top: 118px;	font-weight: bold;	color:#FFFFFF;		font-size: 12px;	line-height: 20px;}
+#banner_click{		width: 680px;	height: 160px;	position: absolute;	margin-left: 0px;	margin-top: 16px;	display:block;}
+#login_left{		width: 132px;	height: 40px;	float: left;}
+#login_right{		width: 88px;	height: 40px;	float: left;}
+
+#main_bottom{			width: auto;	min-height: 400px;	background: url(images/bg_line.png) bottom repeat-x;}
+#main_bottom_inner{		width: 1024px;	min-height: 400px;	background: url(images/bg_contents_line.png);	margin: auto;}
+#main_bottom_bottom{	width: 1024px;	height: 126px;		background: url(images/cloud.png);				margin: auto;	font-size: 12px;}
+#copyright{				width: 720px;	height: 40px;		margin-left: 280px;	margin-top: 20px;	position: absolute;}
+
+#menu{		float: left;	width: 85px;	margin: 0px 0px 0px 43px; display: inline;}
+#sub_menu{	float: left;	width: 95px;	font-size: 12px;	line-height: 20px;	padding-left: 2px;}
+#contents{	float: left;	width: 750px;}
+
+/* -- NCU Fresh 2010 Homepage -- */
+#home_main
+{
+	width: 740px;
+}
+
+.home_block
+{
+	width: 370px;
+	min-height: 285px;
+	float: left;
+}

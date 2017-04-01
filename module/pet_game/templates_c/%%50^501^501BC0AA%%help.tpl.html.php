@@ -1,0 +1,31 @@
+<?php /* Smarty version 2.6.26, created on 2011-08-08 06:00:40
+         compiled from zh_tw/help.tpl.html */ ?>
+<div class="help_main">
+	<div class="help_title">
+		<a class="close" href="#"></a>
+	</div>
+	<div class="help_contents">
+		<div class="help_content">
+			<h1>遊戲說明</h1>
+			<p style="text-indent: 2em;">各位新生好！我是松濤動物園的園長，美強生: )</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">隸屬於NeVeRcArEu組織的松濤動物園，由於近年來經費遭縮減，必須忍痛送走園內可愛動物，讓中大新生認養作寵物。</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">當註冊知訊網的帳號時，每個人都可以得到一隻寵物，一共有十種：米老鼠、巧虎、奶油獅、泡泡龍、阿蛇、鐵馬、小太羊、醜布拉雞、歐弟狗、喬巴。任選一種來飼養，牠將會對你忠心耿耿，並且十分乖巧聽話！</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">寵物的生命值(HP)代表牠存活的生命力，一旦肚子餓了、太胖了、生病受傷了、累了，生命值都會降低。此時就要靠主人的細心照料，讓牠再恢復元氣，補回生命值。</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">照顧寵物需要愛心和耐心，切記隨時注意牠的狀態(NOW)。當你的寵物正在肚子餓時，帶牠去附近吃吃東西吧！東西吃多了可能會發胖，此時就得去運動健身啦！牠也可能會在進食、運動時有生病受傷的情形，那要趕緊帶牠去看病了！或者是太累了，就讓牠休息囉！回答正確的答案，才能補充生命值，多去看看不同的地方吧！</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">怕你的寵物太寂寞嗎？你可以帶牠去拜訪其他寵物。在各個論壇出現的其他使用者頭像，可連結到他的個人專區，加為好友以後，就可以拜訪好友的寵物了！據園長我的觀察，這些動物們似乎自立了兩個陣營，不同陣營間，偶爾惡作劇是常有的事。至於哪些動物屬於同一陣營，就要靠主人的細心觀察了！和好友的寵物一起吃東西、運動、散步、讀書，發生一些精采有趣的事，彼此的生命值，也會因為陣營的異同而互相消長喔！</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">除此之外，若你連續數天登入知訊網關心寵物，你的寵物將會進化成意想不到的樣貌！每隻寵物都有兩個進化級，也就是共有三個等級。最後擁有最高等級寵物的新生們，園長將會抽出數名幸運者，可獲得諮商中心贊助的精美禮物！</p>
+<p style="text-indent: 2em;">&nbsp;</p>
+<p style="text-indent: 2em;">松濤動物園關心您: )</p>
+		</div>
+	</div>
+	<div class="pagination">
+		<a class="prev" href="#"></a>
+		<a class="next" href="#"></a>
+	</div>
+</div>

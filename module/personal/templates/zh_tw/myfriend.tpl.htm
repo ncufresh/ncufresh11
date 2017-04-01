@@ -1,0 +1,21 @@
+<div class="top_menu">
+	<{foreach from=$top_menu item=value}>
+		<a href="<{$value.href}>"><{$value.name}></a>
+	<{/foreach}>
+</div>
+
+<div class="personal_main">
+		<{foreach from=$personal_request item=request}>
+			<a href="index.php?info_id=<{$request.friendid}>"><{$request.friendid}></a>傳來交友邀請：
+			<a href="myfriend.php?fid=<{$request.friendid}>&accept=true">同意</a>
+			<a href="myfriend.php?fid=<{$request.friendid}>&accept=false">拒絕</a>
+			<br />
+		<{/foreach}>		
+		<br />好友列表:<br />
+			<{foreach from=$friend item=list}>			
+				<a href="index.php?info_id=<{$list.friendid}>"><{$list.nickname}>(<{$list.username}>)</a>
+				<a href="myfriend.php?action=del&did=<{$list.friendid}>">刪除</a><br />
+			<{/foreach}>
+		<hr />
+		<{$msg}>
+</div>

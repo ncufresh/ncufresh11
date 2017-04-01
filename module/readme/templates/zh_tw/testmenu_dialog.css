@@ -1,0 +1,366 @@
+/*
+ * jQuery UI CSS Framework 1.8.14
+ *
+ * Copyright 2011, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Theming/API
+ */
+
+/* Layout helpers
+----------------------------------*/
+.ui-dialog { position: absolute; width: 300px;  }
+.ui-dialog .ui-dialog-content { position: absolute; border: 0;background: none; overflow: auto; zoom: 1; }
+
+
+
+/*contentlife
+@charset "utf-8";
+/* CSS Document */
+#table_up
+{
+margin-left: 30px;
+margin-top: 55px;
+border: 0px;
+}
+#table_in
+{
+margin-left: 50px;
+margin-top: 20px;
+border: 0px; 
+}
+
+
+#background1_0
+{
+
+background-image:url('sonpages/sonpages/new/b1 (1).png');
+
+}
+
+#background1_1
+{
+
+background-image:url('sonpages/sonpages/new/b1 (2).png');
+
+}
+
+#background1_2
+{
+
+background-image:url('sonpages/sonpages/new/b1 (3).png');
+
+}
+
+#background1_3
+{
+
+background-image:url('sonpages/sonpages/new/b1 (4).png');
+
+}
+
+#background1_4
+{
+
+background-image:url('sonpages/sonpages/new/b1 (5).png');
+
+}
+
+
+#background1_5
+{
+
+background-image:url('sonpages/sonpages/new/b1 (6).png');
+
+}
+
+#background2_0
+{
+
+background-image:url('sonpages/sonpages/new/b2 (1).png');
+
+}
+
+#background2_1
+{
+
+background-image:url('sonpages/sonpages/new/b2 (2).png');
+
+}
+
+
+#background2_2
+{
+
+background-image:url('sonpages/sonpages/new/b2 (3).png');
+
+}
+
+
+#background2_3
+{
+
+background-image:url('sonpages/sonpages/new/b2 (4).png');
+
+}
+
+#background2_4
+{
+
+background-image:url('sonpages/sonpages/new/b2 (5).png');
+
+}
+
+#background2_5
+{
+
+background-image:url('sonpages/sonpages/new/b2 (6).png');
+
+}
+
+
+
+
+#background3_0
+{
+
+background-image:url('sonpages/sonpages/new/b3 (1).png');
+
+}
+
+
+
+#background3_1
+{
+
+background-image:url('sonpages/sonpages/new/b3 (2).png');
+
+}
+
+
+
+#background3_2
+{
+
+background-image:url('sonpages/sonpages/new/b3 (3).png');
+
+}
+
+
+#background3_3
+{
+
+background-image:url('sonpages/sonpages/new/b3 (4).png');
+
+}
+
+
+
+#background4_0
+{
+
+background-image:url('sonpages/sonpages/new/b6 (1).png');
+
+}
+
+
+#background4_1
+{
+
+background-image:url('sonpages/sonpages/new/b6 (2).png');
+
+}
+
+#background4_2
+{
+
+background-image:url('sonpages/sonpages/new/b6 (3).png');
+
+}
+
+
+#background5_0
+{
+
+background-image:url('sonpages/sonpages/new/b7 (1).png');
+
+}
+
+
+#background5_1
+{
+
+background-image:url('sonpages/sonpages/new/b7 (2).png');
+
+}
+
+#background5_2
+{
+
+background-image:url('sonpages/sonpages/new/b7 (3).png');
+
+}
+
+
+#background5_3
+{
+
+background-image:url('sonpages/sonpages/new/b7 (4).png');
+
+}
+
+
+#background5_4
+{
+
+background-image:url('sonpages/sonpages/new/b7 (5).png');
+
+}
+
+
+#background5_5
+{
+
+background-image:url('sonpages/sonpages/new/b7 (6).png');
+
+}
+
+
+#background6_0
+{
+
+background-image:url('sonpages/sonpages/new/b5 (1).png');
+
+}
+
+
+#background6_1
+{
+
+background-image:url('sonpages/sonpages/new/b5 (2).png');
+
+}
+
+
+
+#background6_2
+{
+
+background-image:url('sonpages/sonpages/new/b5 (3).png');
+
+}
+
+
+
+#background6_3
+{
+
+background-image:url('sonpages/sonpages/new/b5 (4).png');
+
+}
+
+
+#background6_4
+{
+
+background-image:url('sonpages/sonpages/new/b5 (5).png');
+
+}
+
+
+
+#background7_0
+{
+
+background-image:url('sonpages/sonpages/new/b4 (1).png');
+
+}
+
+
+#background7_1
+{
+
+background-image:url('sonpages/sonpages/new/b4 (2).png');
+
+}
+
+#background7_2
+{
+
+background-image:url('sonpages/sonpages/new/b4 (3).png');
+
+}
+
+#background7_3
+{
+
+background-image:url('sonpages/sonpages/new/b4 (4).png');
+
+}
+
+
+
+
+
+/**/
+.clear{
+	display: block;
+	clear: both;
+}
+
+.close{
+	background-image: url('sonpages/sonpages/closeb.png');
+	
+	margin: 38px 0px 0px 530px;
+	display: inline-block;
+	width: 42px;
+	height: 41px;
+	
+}
+
+.backgroundsetting
+{
+display: inline-block;
+float: left;
+height: 565px;
+position: relative;
+width: 626px;
+z-index: 1;
+
+}
+
+.table_up
+{
+display: inline-block;
+float: left;
+height: 50px;
+position: absolute;
+width: 495px;
+text-decoration:none;
+font-size: 20px;
+line-height: 30px;
+color:#59381d;
+Font-Family: "·L³n¥¿¶ÂÅé",Arial;/*TEXT-ALIGN: left;*//*Microsoft JhengHei*/
+font-weight: bold;
+
+}
+
+.table_in
+{
+display: inline-block;
+float: left;
+height: 421px;
+position: absolute;
+width: 539px;
+color: #59381d;
+font-size: 20px;
+line-height: 30px;
+Font-Family: Microsoft JhengHei,Arial;
+font-weight: bold;
+/*z-index: 2;*/
+overflow: auto;
+text-decoration:none;
+word-wrap: break-word;
+}
+*/

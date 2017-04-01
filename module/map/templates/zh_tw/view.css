@@ -1,0 +1,180 @@
+div#map_module_main {
+	background-image: url("images/map_bg.png");
+	margin: 0 auto;
+	width: 650px;
+	height: 600px;
+}
+
+a {
+	cursor:pointer;
+}
+
+a.show {
+	display: inline-block;
+	position: absolute;
+	float: left;
+}
+a.show:hover {
+	z-index:99 !important;
+}
+a#v01 {
+	width: 116px;
+	height: 91px;
+	background-image: url("images/view/v01.png");
+	margin:348px 0 0 68px;
+}
+a#v01:hover {
+	background-image: url("images/view/v01h.png");
+}
+a#v02 {
+	width: 106px;
+	height: 72px;
+	background-image: url("images/view/v02.png");
+	margin:77px 0 0 324px;
+}
+a#v02:hover {
+	background-image: url("images/view/v02h.png");
+}
+a#v03 {
+	width: 116px;
+	height: 84px;
+	background-image: url("images/view/v03.png");
+	margin:414px 0 0 477px;
+}
+a#v03:hover {
+	background-image: url("images/view/v03h.png");
+}
+a#v04 {
+	width: 58px;
+	height: 59px;
+	background-image: url("images/view/v04.png");
+	margin:210px 0 0 388px;
+}
+a#v04:hover {
+	background-image: url("images/view/v04h.png");
+}
+a#v05 {
+	width: 238px;
+	height: 119px;
+	background-image: url("images/view/v05.png");
+	margin:199px 0 0 168px;
+}
+a#v05:hover {
+	background-image: url("images/view/v05h.png");
+}
+a#v06 {
+	width: 130px;
+	height: 79px;
+	background-image: url("images/view/v06.png");
+	margin:228px 0 0 258px;
+}
+a#v06:hover {
+	background-image: url("images/view/v06h.png");
+}
+a#v07 {
+	width: 113px;
+	height: 114px;
+	background-image: url("images/view/v07.png");
+	margin:238px 0 0 319px;
+	z-index: 17;
+}
+a#v07:hover {
+	background-image: url("images/view/v07h.png");
+}
+a#v08 {
+	width: 97px;
+	height: 94px;
+	background-image: url("images/view/v08.png");
+	margin:182px 0 0 472px;
+}
+a#v08:hover {
+	background-image: url("images/view/v08h.png");
+}
+a#v09 {
+	width: 59px;
+	height: 57px;
+	background-image: url("images/view/v09.png");
+	margin:272px 0 0 542px;
+}
+a#v09:hover {
+	background-image: url("images/view/v09h.png");
+}
+a#v10 {
+	width: 66px;
+	height: 83px;
+	background-image: url("images/view/v10.png");
+	margin:280px 0 0 210px;
+	z-index:20;
+}
+a#v10:hover {
+	background-image: url("images/view/v10h.png");
+}
+a#v11 {
+	width: 183px;
+	height: 238px;
+	background-image: url("images/view/v11.png");
+	margin:238px 0 0 139px;
+	z-index:5;
+}
+a#v11:hover {
+	background-image: url("images/view/v11h.png");
+}
+a#v12 {
+	width: 169px;
+	height: 158px;
+	background-image: url("images/view/v12.png");
+	margin:298px 0 0 344px;
+	z-index: 17;
+}
+a#v12:hover {
+	background-image: url("images/view/v12h.png");
+}
+a#v13 {
+	width: 52px;
+	height: 75px;
+	background-image: url("images/view/v13.png");
+	margin:281px 0 0 459px;
+	z-index:13;
+}
+a#v13:hover {
+	background-image: url("images/view/v13h.png");
+}
+a#v14 {
+	width: 73px;
+	height: 71px;
+	background-image: url("images/view/v14.png");
+	margin:321px 0 0 153px;
+	z-index:10;
+	z-index:14;
+}
+a#v14:hover {
+	background-image: url("images/view/v14h.png");
+}
+a#v15 {
+	width: 50px;
+	height: 88px;
+	background-image: url("images/view/v15.png");
+	margin:274px 0 0 251px;
+	z-index:18;
+}
+a#v15:hover {
+	background-image: url("images/view/v15h.png");
+}
+a#v16 {
+	width: 51px;
+	height: 68px;
+	background-image: url("images/view/v16.png");
+	margin:227px 0 0 49px;
+}
+a#v16:hover {
+	background-image: url("images/view/v16h.png");
+}
+a#v17 {
+	width: 61px;
+	height: 68px;
+	background-image: url("images/view/v17.png");
+	margin:155px 0 0 323px;
+}
+a#v17:hover {
+	background-image: url("images/view/v17h.png");
+}

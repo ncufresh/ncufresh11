@@ -1,0 +1,7 @@
+div#map_module_main {
+	background-image: url("images/map_full.png");
+	background-repeat: no-repeat;
+	height: 600px;
+	padding:5px;
+	margin:5px;
+}

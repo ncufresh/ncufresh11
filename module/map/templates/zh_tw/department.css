@@ -1,0 +1,161 @@
+div#map_module_main {
+	background-image: url("images/map_bg.png");
+	margin: 0 auto;
+	width: 650px;
+	height: 600px;
+}
+
+a {
+	cursor:pointer;
+}
+
+a.show {
+	display: inline-block;
+	position: absolute;
+	float: left;
+}
+a.show:hover {
+	z-index:99 !important;
+}
+a#d01 {
+	width: 104px;
+	height: 59px;
+	background-image: url("images/department/d01.png");
+	margin:233px 0 0 162px;
+	z-index:1;
+}
+a#d01:hover {
+	background-image: url("images/department/d01h.png");
+}
+a#d02 {
+	width: 109px;
+	height: 66px;
+	background-image: url("images/department/d02.png");
+	margin:190px 0 0 127px;
+}
+a#d02:hover {
+	background-image: url("images/department/d02h.png");
+}
+a#d03 {
+	width: 99px;
+	height: 56px;
+	background-image: url("images/department/d03.png");
+	margin:114px 0 0 94px;
+}
+a#d03:hover {
+	background-image: url("images/department/d03h.png");
+}
+a#d04 {
+	width: 85px;
+	height: 91px;
+	background-image: url("images/department/d04.png");
+	margin:81px 0 0 15px;
+}
+a#d04:hover {
+	background-image: url("images/department/d04h.png");
+}
+a#d05 {
+	width: 144px;
+	height: 90px;
+	background-image: url("images/department/d05.png");
+	margin:246px 0 0 403px;
+}
+a#d05:hover {
+	background-image: url("images/department/d05h.png");
+}
+a#d06 {
+	width: 95px;
+	height: 66px;
+	background-image: url("images/department/d06.png");
+	margin:40px 0 0 255px;
+}
+a#d06:hover {
+	background-image: url("images/department/d06h.png");
+}
+a#d07 {
+	width: 90px;
+	height: 78px;
+	background-image: url("images/department/d07.png");
+	margin:20px 0 0 335px;
+}
+a#d07:hover {
+	background-image: url("images/department/d07h.png");
+}
+a#d08 {
+	width: 113px;
+	height: 69px;
+	background-image: url("images/department/d08.png");
+	margin:338px 0 0 235px;
+}
+a#d08:hover {
+	background-image: url("images/department/d08h.png");
+}
+a#d09 {
+	width: 61px;
+	height: 66px;
+	background-image: url("images/department/d09.png");
+	margin:120px 0 0 354px;
+	z-index:8;
+}
+a#d09:hover {
+	background-image: url("images/department/d09h.png");
+}
+a#d10 {
+	width: 78px;
+	height: 61px;
+	background-image: url("images/department/d10.png");
+	margin:90px 0 0 390px;
+}
+a#d10:hover {
+	background-image: url("images/department/d10h.png");
+}
+a#d11 {
+	width: 89px;
+	height: 72px;
+	background-image: url("images/department/d11.png");
+	margin:88px 0 0 482px;
+	z-index:5;
+}
+a#d11:hover {
+	background-image: url("images/department/d11h.png");
+}
+a#d12 {
+	width: 91px;
+	height: 74px;
+	background-image: url("images/department/d12.png");
+	margin:23px 0 0 414px;
+	z-index:4;
+}
+a#d12:hover {
+	background-image: url("images/department/d12h.png");
+}
+a#d13 {
+	width: 82px;
+	height: 107px;
+	background-image: url("images/department/d13.png");
+	margin:16px 0 0 439px;
+	z-index:4;
+}
+a#d13:hover {
+	background-image: url("images/department/d13h.png");
+}
+a#d14 {
+	width: 178px;
+	height: 86px;
+	background-image: url("images/department/d14.png");
+	margin:156px 0 0 439px;
+	z-index:10;
+}
+a#d14:hover {
+	background-image: url("images/department/d14h.png");
+}
+a#d15 {
+	width: 92px;
+	height: 60px;
+	background-image: url("images/department/d15.png");
+	margin:121px 0 0 430px;
+	z-index:6;
+}
+a#d15:hover {
+	background-image: url("images/department/d15h.png");
+}

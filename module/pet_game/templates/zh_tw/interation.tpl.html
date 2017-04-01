@@ -1,0 +1,21 @@
+<div class="log_main">
+	<div class="log_title">
+		<a class="close" href="#"></a>
+	</div>
+	<div class="log_contents">
+		<div class="log_content">
+			<h1>日記</h1>
+			<{foreach from=$logs item=log}>
+				<div class="log">
+					<img src="<{$log.img_src}>"/>
+					<div><{$log.time}><br /><{$log.record}></div>
+				</div>
+				<hr class="dashed_line" />
+			<{/foreach}>
+		</div>
+	</div>
+	<div class="pagination">
+		<a class="prev" href="#"></a>
+		<a class="next" href="#"></a>
+	</div>
+</div>

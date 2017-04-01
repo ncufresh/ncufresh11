@@ -1,0 +1,19 @@
+#body {
+width: 1024px;
+margin: auto;
+max-height: 500px;
+height: 500px;
+}
+#board_height {
+height: 249px;
+width: 638px;
+margin: auto;
+position: absolute;
+z-index: 20;
+}
+#sidebar_right{
+	height: 470px;
+}
+#footer{	
+	margin-top: 64px;
+}

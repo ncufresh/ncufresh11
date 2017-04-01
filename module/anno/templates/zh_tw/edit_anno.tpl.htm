@@ -1,0 +1,117 @@
+<script type="text/javascript">
+function delete_rel_link(input_urlid)
+{
+	var is_delete_checked = confirm("確認刪除？");
+	if(is_delete_checked)
+	{
+		$.ajax({
+			url: 'delete_ext.php',
+			data: {
+				action: 'op_rel_link_delete',
+				urlid: input_urlid,
+			},
+			success: function(response){
+				$('div#rel_link_' + input_urlid).html('');
+				$('div#rel_link_' + input_urlid).html(response);
+			}
+		});
+	}
+}
+
+
+function delete_attach_file(input_fid)
+{
+	var is_delete_checked = confirm("確認刪除？");
+	if(is_delete_checked)
+	{
+		$.ajax({
+			url: 'delete_ext.php',
+			data: {
+				action: 'op_attachfile_delete',
+				fid: input_fid,
+			},
+			success: function(response){
+				$('div#attach_file_' + input_fid).html('');
+				$('div#attach_file_' + input_fid).html(response);
+			}
+		});
+	}
+}
+</script>
+<form action="edit_anno.php?action=<{$next_action}>" method="post" enctype="multipart/form-data">
+<{if $error_message != ""}>
+<span class="warning_msg"><{$error_message}></span>
+<br /><br />
+<{/if}>
+
+<div id="anno_upper"></div>
+
+<div id="anno_middle">
+	<div id="edit_anno_main">
+	  <div class="edit_container">
+	    <div class="edit_var">標題</div>
+	    <div class="edit_value"><input type="text" name="title" value="<{$post_title}>" /></div>
+	    <br class="clear" />
+	  </div>
+	  <div class="edit_container">
+	    <div class="edit_var">內容</div>
+	    <div class="edit_value"><textarea name="contents" width="" class="tinymce"><{$post_contents}></textarea>
+	    </div>
+	    <br class="clear" />
+	  </div>
+	  <div class="edit_container">
+	    <div class="edit_var">立即發布？</div>
+	    <div class="edit_value"><input name="is_display" type="checkbox" value="1" <{if $post_is_display == 1}>checked="checked"<{/if}> /></div>
+	    <br class="clear" />
+	  </div>
+	  <div class="edit_container">
+	    <div class="edit_var">相關連結</div>
+	    <div class="edit_value">
+	    <{section name=i loop=$rel_link_array}>
+	    <div id="rel_link_<{$rel_link_array[i].urlid}>">
+	      <strong><a onclick="delete_rel_link(<{$rel_link_array[i].urlid}>);">[刪除]</a></strong>
+	      <a title="<{$rel_link_array[i].title}>" target="_blank" href="<{$rel_link_array[i].path}>"><{$rel_link_array[i].title}> (網址：<{$rel_link_array[i].path}>)</a><br />
+	    </div>
+	    <{/section}>
+	    <br />
+	    <strong>新增連結</strong> - 
+	    標題: <input name="rel_link_title" type="text" size="5" />
+	    網址: <input name="rel_link_path" type="text" value="http://"/>
+	    <input type="submit" name="submit" value="新增連結" />
+	    </div>
+	    <br class="clear" />
+	  </div>
+	  <div class="edit_container">
+	    <div class="edit_var">附件檔案</div>
+	    <div class="edit_value">
+	    <{section name=i loop=$attach_file_array}>
+	    <div id="attach_file_<{$attach_file_array[i].fid}>">
+	      <strong><a onclick="delete_attach_file(<{$attach_file_array[i].fid}>);">[刪除]</a></strong>
+	      <a title="<{$attach_file_array[i].title}>" target="_blank" href="<{$attach_file_array[i].path}>"><{$attach_file_array[i].title}></a><br />
+	    </div>
+	    <{/section}>
+	    <br />
+	    <strong>新增附件</strong> - 
+	    標題: <input name="attach_title" type="text" size="5" />
+	    網址: <input name="attach_file" type="file" size="10" />
+	    <input type="submit" name="submit" value="新增附檔" />
+	    </div>
+	    <br class="clear" />
+	  </div>
+	  <div class="edit_container">
+	    <div class="edit_var"></div>
+	    <div class="edit_value"><br />
+	    <input type="hidden" name="tid" value="<{$post_tid}>" />
+	    <input type="submit" name="submit" value="送出公告" />
+	    <input type="reset" name="reset" value="重新填寫" /><br /><br />
+	    </div>
+	    <br class="clear" />
+	  </div>
+	  <br class="clear" />
+	</div>
+	<div id="anno_return"><a href="list_anno.php"><img src="templates/zh_tw/images/return.png" /></a></div>
+</div>
+
+<div id="anno_footer"></div>
+</form>
+

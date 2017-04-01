@@ -1,0 +1,138 @@
+<?php /* Smarty version 2.6.26, created on 2011-08-05 15:46:19
+         compiled from zh_tw/index.tpl.htm */ ?>
+<!--
+<div id="pet_game_main">
+	<div id="pet_game_top">
+		<h4>帶牠去...</h4>
+		<?php $_from = $this->_tpl_vars['actions']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['type'] => $this->_tpl_vars['value']):
+?>
+			<div class="actions">
+				<ul>
+					<span class="action"><?php echo $this->_tpl_vars['en_ch_list'][$this->_tpl_vars['type']]; ?>
+</span>
+					<?php $_from = $this->_tpl_vars['value']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['v']):
+?>
+						<li><a class="go_map" href="map.php?action=info&type=<?php echo $this->_tpl_vars['type']; ?>
+&id=<?php echo $this->_tpl_vars['k']; ?>
+"><?php echo $this->_tpl_vars['v']['name']; ?>
+</a></li>
+					<?php endforeach; endif; unset($_from); ?>
+				</ul>
+			</div>
+		<?php endforeach; endif; unset($_from); ?>
+	</div>
+
+	
+	
+	<div id="pet_game_middle">
+	
+		<img src="<?php echo $this->_tpl_vars['img_src']; ?>
+" /><br />
+		<span>寵物名字：<?php echo $this->_tpl_vars['pet_name']; ?>
+</span>
+		<span>性別：<?php echo $this->_tpl_vars['pet_sex']; ?>
+</span>
+	</div>
+	<div id="pet_game_bottom">
+		<a id="help_link" href="help.php">遊戲說明</a>
+		<span>生命值：<span id="pet_life"><?php echo $this->_tpl_vars['pet_life']; ?>
+<?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "zh_tw/life_stick.block.tpl.html", 'smarty_include_vars' => array()));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?></span></span>
+		<span>寵物狀態：
+			<span id="pet_states">
+			<?php $_from = $this->_tpl_vars['pet_state']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['value']):
+?>
+				<?php echo $this->_tpl_vars['value']; ?>
+
+			<?php endforeach; endif; unset($_from); ?>
+			</span>
+		</span>
+		<a id="friend_link" href="friend.php">好友(<?php echo $this->_tpl_vars['num_friends']; ?>
+)</a>
+		<a id="interation_link" href="interation.php">好友互動(<?php echo $this->_tpl_vars['num_interations']; ?>
+)</a>
+	</div>
+	
+</div>
+<div class="map"></div>
+<div class="friend"></div>
+<div class="help"></div>
+-->
+<div class="pet_game_main">
+	<div class="pet_game_actions">
+		<div id="eat" class="action">
+			<div class="action_name">
+			</div>
+			<div class="action_content">
+				<ul class="action_content_main">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+				</ul>
+				<div class="action_content_bottom">
+				</div>
+			</div>
+		</div>
+		<div id="exercise" class="action">
+			<div class="action_name">
+			</div>
+			<div class="action_content">
+				<ul class="action_content_main">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+				</ul>
+				<div class="action_content_bottom">
+				</div>
+			</div>
+		</div>
+		<div id="see_a_doctor" class="action">
+			<div class="action_name">
+			</div>
+			<div class="action_content">
+				<ul class="action_content_main">
+					<li>1</li>
+					<li>2</li>
+				</ul>
+				<div class="action_content_bottom">
+				</div>
+			</div>
+		</div>
+		<div id="rest" class="action">
+			<div class="action_name">
+			</div>
+			<div class="action_content">
+				<ul class="action_content_main">
+					<li>1</li>
+					<li>2</li>
+				</ul>
+				<div class="action_content_bottom">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pet_game_pic">
+	</div>
+	<div class="pet_game_status">
+	</div>
+</div>
+<div class="pet_game_help">
+</div>
+<div class="pet_game_map">
+</div>
+<div class="pet_game_friend">
+</div>

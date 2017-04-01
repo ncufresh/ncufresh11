@@ -1,0 +1,419 @@
+@charset "utf-8";
+/* CSS Document */
+a:link {color:#000000; text-decoration:none;} 
+a:visited {color:#000000; text-decoration:none;} 
+a:hover {text-decoration:underline;} 
+a:active {text-decoration:underline;} 
+
+
+#club_main{
+	background-image: url("images/BG_03.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 594px;
+}
+.piece{
+	width: 555px;
+	height: 40px;
+	padding-left: 85px;
+	padding-top: 30px;
+	font-family: "Microsoft JhengHei",Arial;
+	font-size: 20px;
+	font-weight: bold;
+}
+#academic{
+	background-image: url("images/A.png");
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 206px;
+	margin-left: 78px;
+	float: left;
+	_display: inline;
+}
+#leisure{
+	background-image: url("images/B.png");
+	background-repeat: no-repeat;
+	width: 159px;
+	height: 206px;
+	float: left;
+	_display: inline;
+}
+#service{
+	background-image: url("images/C.png");
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 206px;
+	float: left;
+	margin-right: 83px;
+	_display: inline;
+}
+#friendship{
+	background-image: url("images/D.png");
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 209px;
+	margin-left: 78px;
+	margin-bottom: 136px;
+	float: left;
+	_display: inline;
+}
+#student{
+	background-image: url("images/E.png");
+	background-repeat: no-repeat;
+	width: 159px;
+	height: 209px;
+	float: left;
+	margin-bottom: 136px;
+	_display: inline;
+	
+}
+#department{
+	background-image: url("images/F.png");
+	background-repeat: no-repeat;
+	width: 160px;
+	height: 209px;
+	float: left;
+	margin-right: 83px;
+	margin-bottom: 136px;
+	_display: inline;
+}
+
+#category_main{
+	width: 640px;
+	height: 621px;
+}
+
+.list_title{
+	padding-top: 20px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+.list_content{
+	padding-left: 60px;
+	padding-right: 20px;
+}
+
+#main2{
+	width: 600px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 30px;
+	background-image: url("images/inner.png");
+}
+
+.none_pic{
+	background-image: url("images/none.png");
+	background-repeat: no-repeat;
+	width: 274px;
+	height: 187px;
+	float: left;
+	margin-right: 13px;
+	margin-left: 13px;
+	_display: inline;
+
+}
+.aru_pic{
+	width: 274px;
+	height: 187px;
+	float: left;
+	margin-right: 13px;
+	margin-left: 13px;
+	_display: inline;
+}
+
+#academic_top{
+	background-image: url("images/academic/top.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 103px;
+}
+#academic_center{
+	background-image: url("images/academic/center.png");
+	background-repeat: no-repeat;
+	width: 590px;
+	height: 336px;
+	padding-left: 25px;
+	padding-right: 25px;
+	line-height: 40px;
+	_display: inline;
+}
+#academic_bottom{
+	background-image: url("images/academic/bottom.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 148px;
+}
+.ac1{
+	margin-left: 50px;
+	width: 120px;
+	float: left;
+	_display: inline;
+}
+.ac2{
+	margin-left: 20px;
+	width: 140px;
+	float: left;
+	_display: inline;
+}
+.ac3{
+	margin-left: 20px;
+	width: 240px;
+	float: left;
+	_display: inline;
+}
+
+#leisure_top{
+	background-image: url("images/leisure/top.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 103px;
+}
+#leisure_center{
+	background-image: url("images/leisure/center.png");
+	background-repeat: no-repeat;
+	background-color: white;
+	width: 590px;
+	height: 336px;
+	padding-left: 25px;
+	padding-right: 25px;
+	line-height: 40px;
+	_display: inline;
+}
+#leisure_bottom{
+	background-image: url("images/leisure/bottom.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 148px;
+}
+.le1{
+	margin-left: 20px;
+	width: 100px;
+	float: left;
+	_display: inline;
+}
+.le2{
+	margin-left: 10px;
+	width: 100px;
+	float: left;
+	_display: inline;
+}
+.le3{
+	margin-left: 10px;
+	width: 140px;
+	float: left;
+	_display: inline;
+}
+.le4{
+	margin-left: 10px;
+	width: 190px;
+	float: left;
+	_display: inline;
+}
+
+#service_top{
+	background-image: url("images/service/top.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 103px;
+}
+#service_center{
+	background-image: url("images/service/center.png");
+	background-repeat: no-repeat;
+	background-color: white;
+	width: 520px;
+	height: 336px;
+	padding-left: 95px;
+	padding-right: 25px;
+	line-height: 40px;
+	_display: inline;
+}
+#service_bottom{
+	background-image: url("images/service/bottom.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 148px;
+}
+
+#friendship_top{
+	background-image: url("images/friendship/top.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 103px;
+}
+#friendship_center{
+	background-image: url("images/friendship/center.png");
+	background-repeat: no-repeat;
+	width: 590px;
+	height: 336px;
+	padding-left: 25px;
+	padding-right: 25px;
+	line-height: 40px;
+	_display: inline;
+}
+#friendship_bottom{
+	background-image: url("images/friendship/bottom.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 148px;
+}
+.fr1{
+	margin-left: 20px;
+	width: 100px;
+	float: left;
+	_display: inline;
+}
+.fr2{
+	width: 105px;
+	float: left;
+	_display: inline;
+}
+.fr3{
+	width: 135px;
+	float: left;
+	_display: inline;
+}
+.fr4{
+	width: 230px;
+	float: left;
+	_display: inline;
+}
+.fr5{
+	margin-left: 20px;
+	width: 570px;
+	float: left;
+	_display: inline;
+}
+
+#student_top{
+	background-image: url("images/student/top.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 103px;
+}
+#student_center{
+	background-image: url("images/student/center.png");
+	background-repeat: no-repeat;
+	width: 520px;
+	height: 336px;
+	padding-left: 95px;
+	padding-right: 25px;
+	line-height: 40px;
+	_display: inline;
+}
+#student_bottom{
+	background-image: url("images/student/bottom.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 148px;
+}
+
+#department_top{
+	background-image: url("images/department/top.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 103px;
+}
+#department_center{
+	background-image: url("images/department/center.png");
+	background-repeat: no-repeat;
+	background-color: white;
+	width: 590px;
+	height: 336px;
+	padding-left: 25px;
+	padding-right: 25px;
+	line-height: 40px;
+	_display: inline;
+}
+#department_bottom{
+	background-image: url("images/department/bottom.png");
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 148px;
+}
+.des{
+	width: 120px;
+	height: 27px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	float: left;
+	_display: inline;
+}
+.deb{
+	width: 220px;
+	height: 27px;
+	padding-top: 5px;
+	margin-bottom: 5px;
+	float: left;
+	_display: inline;
+}
+.de1{
+	background-image: url("images/1.png");
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 27px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 15px;
+	float: left;
+	_display: inline;
+}
+.de2{
+	background-image: url("images/2.png");
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 27px;
+	margin-top: 5px;
+	margin-bottom: 42px;
+	margin-left: 5px;
+	margin-right: 15px;
+	float: left;
+}
+.de3{
+	background-image: url("images/3.png");
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 27px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 15px;
+	float: left;
+	_display: inline;
+}
+.de4{
+	background-image: url("images/4.png");
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 27px;
+	margin-top: 5px;
+	margin-bottom: 42px;
+	margin-left: 5px;
+	margin-right: 15px;
+	float: left;
+	_display: inline;
+}
+.de5{
+	background-image: url("images/5.png");
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 27px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 15px;
+	float: left;
+	_display: inline;
+}
+.de6{
+	background-image: url("images/6.png");
+	background-repeat: no-repeat;
+	width: 110px;
+	height: 27px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	margin-right: 15px;
+	float: left;
+	_display: inline;
+}

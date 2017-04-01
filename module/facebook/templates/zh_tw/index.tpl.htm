@@ -1,0 +1,29 @@
+<div class="new_module_main">
+<{if $isLogin}>
+您在臉書的個人資料為：<br />
+<img src="https://graph.facebook.com/<{$fbuser.id}>/picture" /><br />
+<{$fbtext}>
+User ID: <{$fbuser.id}><br />
+Name: <{$fbuser.name}><br />
+Gender: <{$fbuser.gender}><br />
+Bio: <{$fbuser.bio}><br />
+Website: <{$fbuser.website}><br />
+Email: <{$fbuser.email}><br />
+<br />
+<form action="" method="post">
+<input type="text" name="fbtext" id="updateFB" />
+<input type="submit" name="submitBtn" id="submitBtn" value="貼到臉書" />
+<input type="hidden" name="action" value="updateFB" />
+</form>
+<{if $fbupdate}>
+臉書訊息更新成功！
+<{/if}>
+<br /><a href="<{$fburl}>">點我登出Facebook</a>
+<{$fbtext}>
+<{else}>
+您尚未登入！
+<a href="<{$fburl}>">點我登入Facebook</a>
+<{/if}>
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=243899775634420&amp;xfbml=1"></script><fb:like href="" send="true" width="450" show_faces="true" font=""></fb:like>
+<p>總共有 <{$fblikenum}> 人按了讚</p>
+</div>

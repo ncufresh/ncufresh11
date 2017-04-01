@@ -1,0 +1,43 @@
+<div id="mail_list_main">
+	<form method="post" action="mail.php">
+	<table id="mail_list_class">
+		<thead>
+			<tr>
+				<td class="title">
+					訊息標題
+				</td>
+				<td class="sender">
+					寄件人
+				</td>
+				<td class="date">
+					寄件日期
+				</td>
+				<td class="del">
+					
+				</td>
+			</tr>
+		</thead>
+	</table>
+	<div class="slides">
+		<{foreach name=mail_list from=$mails key=k item=mail}>
+			<{assign var=rows value=7}>
+			<{if $smarty.foreach.mail_list.index mod $rows == 0 }><table class="mail_list"><tbody class="slide"><{/if}>
+				<tr>
+					<td class="title">
+					<{if $mail.is_read == "0"}>
+						<img class="read_image" src="./templates/zh_tw/images/unread.png" align="middle"/>
+					<{else}>
+						<img class="read_image" src="./templates/zh_tw/images/read.png" align="middle"/>
+					<{/if}>
+					<a class="mail_link" href="show.php?mailid=<{$mail.id}>">
+					<{$mail.title}></a></td>
+					<td class="sender"><a class="mail_link" href="index.php?info_id=<{$mail.senderid}>"><{$mail.username}></a></td>
+					<td class="date"><{$mail.date}></td>
+					<td class="del"><a href="mail.php?del_id=<{$mail.id}>" class="del_button" name="mailid" ></a></td>
+				</tr>
+			<{if $smarty.foreach.mail_list.index mod $rows == ($rows - 1) or $smarty.foreach.mail_list.iteration == $smarty.foreach.mail_list.total}></tbody></table><{/if}>
+		<{/foreach}>
+	</div>
+	</form>
+</div>
+<{include file="zh_tw/mailbox.tpl.html"}>

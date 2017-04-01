@@ -1,0 +1,21 @@
+<div class="new_mail_main">
+	<form id="new_mail_form" method="post" action="newmail.php">
+		<table class="content">
+			<tbody>
+				<tr><td class="tag">收件人ID</td><td><input type="text" value="<{$rid}>" name="reciever" /></td></tr>
+				<tr><td class="tag">標題</td><td><input type="text" value="<{$title}>" name="title" /></td></tr>
+				<tr><td class="tag">內容</td></tr>
+				<tr><td colspan="2"><textarea class="text" name="mail"></textarea></td></tr>
+			</tbody>
+		</table>
+		<input class="send" type="submit" value="送出" />
+		<a class="back" href="mail.php">
+			回到上一層
+		</a>
+	</form>
+	<!--
+	<a href="mail.php">信件列表</a>
+	<a href="newmail.php">撰寫新信</a>
+	-->
+</div>
+<{include file="./zh_tw/mailbox.tpl.html"}>

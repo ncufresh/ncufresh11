@@ -1,0 +1,99 @@
+<script>
+$(document).ready(function() {
+	$('.text1').click(function() {
+		$('#show_content').load($(this).attr('href'));
+		
+				
+		return false;
+	});
+	
+	$('.close').click(function(){
+							$('#show_content').dialog('close');
+						
+							return false;
+						        });
+					
+});
+
+</script>
+
+<style type="text/css">
+
+.table_in
+{
+display: inline;
+float: left;
+height: 421px;
+position: absolute;
+width: 539px;
+color: #59381d;
+font-size: 16px;
+line-height: 30px;
+Font-Family: Microsoft JhengHei,Arial;
+font-weight: bold;
+/*z-index: 2;*/
+overflow-y: auto;
+overflow-x: hidden;
+text-decoration:none;
+word-wrap: break-word;
+}
+
+.table_up
+{
+display: inline;
+float: left;
+height: 50px;
+position: absolute;
+width: 495px;
+text-decoration:none;
+font-size: 20px;
+line-height: 30px;
+color:#59381d;
+Font-Family: "·L³n¥¿¶ÂÅé",Arial;/*TEXT-ALIGN: left;*//*Microsoft JhengHei*/
+font-weight: bold;
+
+}
+#photo{
+	text-align: center;
+}
+#table_up a{
+	text-decoration: none;
+	color: #11245e;
+}
+#table_up a:visited{
+	color: #ba1f19;
+}
+
+</style>
+<div id="background<{$img1}>_<{$img2}>" class="backgroundsetting">
+	
+
+       <div id="table_up_pos" class="table_up">
+
+		   <{section name=foo loop=$array_2D}>
+			  
+			   <a  class="text1" href="life_content.php?c1id=<{$array_2D[foo].category_id}>&scid=<{$array_2D[foo].sc_category_id}>&c2id=<{$smarty.section.foo.index}>">
+				   &nbsp;
+				   <{$array_2D[foo].content_name}>
+			   </a>
+		   
+		   <{/section}>
+		   &nbsp;
+           	   <br class="clear">
+	   </div>
+	   
+       <a class="close" href=""></a>  
+  
+	    <br class="clear">
+		<div id="table_in_pos" class="table_in" >
+
+			<{section name=foo loop=$array_4D}>
+
+
+<!-- 				 name:<{$array_4D[foo].content_name}><br/><br/> -->
+				 <!-- content: --><{$array_4D[foo].content}><br/><br/>
+
+			<{/section}>
+	     <br class="clear">      
+		</div>
+</div>
